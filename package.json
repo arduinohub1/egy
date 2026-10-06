@@ -1,0 +1,13 @@
+{
+  "name": "arduino-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arduino Hub - Electronics Store with AI Project Assistant",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "cd server && npm install"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
