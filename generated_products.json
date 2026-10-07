@@ -1,0 +1,4146 @@
+[
+  {
+    "title": "Arduino Uno R3",
+    "category": "Microcontrollers",
+    "price": 189,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "Arduino Mega 2560",
+    "category": "Microcontrollers",
+    "price": 467,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "Arduino Nano V3",
+    "category": "Microcontrollers",
+    "price": 381,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "Arduino Leonardo",
+    "category": "Microcontrollers",
+    "price": 357,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "Arduino Pro Mini",
+    "category": "Microcontrollers",
+    "price": 272,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "ESP32 DevKit V1",
+    "category": "Microcontrollers",
+    "price": 346,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "ESP8266 NodeMCU",
+    "category": "Microcontrollers",
+    "price": 440,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "Raspberry Pi 4 4GB",
+    "category": "Microcontrollers",
+    "price": 236,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "Raspberry Pi 3 B+",
+    "category": "Microcontrollers",
+    "price": 274,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "Raspberry Pi Pico",
+    "category": "Microcontrollers",
+    "price": 280,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "STM32 Blue Pill",
+    "category": "Microcontrollers",
+    "price": 139,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "Teensy 4.0",
+    "category": "Microcontrollers",
+    "price": 315,
+    "rating": 4.8,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg"
+  },
+  {
+    "title": "PIR Motion Sensor HC-SR501",
+    "category": "Sensors",
+    "price": 111,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Ultrasonic Sensor HC-SR04",
+    "category": "Sensors",
+    "price": 102,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "DHT11 Temp/Humidity",
+    "category": "Sensors",
+    "price": 161,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "DHT22 Temp/Humidity",
+    "category": "Sensors",
+    "price": 80,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "MQ-2 Gas Sensor",
+    "category": "Sensors",
+    "price": 32,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "MQ-7 CO Sensor",
+    "category": "Sensors",
+    "price": 170,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "LDR Photoresistor Module",
+    "category": "Sensors",
+    "price": 164,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Soil Moisture Sensor",
+    "category": "Sensors",
+    "price": 149,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Water Level Sensor",
+    "category": "Sensors",
+    "price": 63,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Sound Sensor Module",
+    "category": "Sensors",
+    "price": 120,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "IR Obstacle Avoidance",
+    "category": "Sensors",
+    "price": 113,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Flame Sensor",
+    "category": "Sensors",
+    "price": 169,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Heart Rate Pulse Sensor",
+    "category": "Sensors",
+    "price": 158,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "GY-521 MPU6050 Gyro",
+    "category": "Sensors",
+    "price": 33,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "PIR Motion Sensor HC-SR501 (V2)",
+    "category": "Sensors",
+    "price": 61,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Ultrasonic Sensor HC-SR04 (V2)",
+    "category": "Sensors",
+    "price": 118,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "DHT11 Temp/Humidity (V2)",
+    "category": "Sensors",
+    "price": 160,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "DHT22 Temp/Humidity (V2)",
+    "category": "Sensors",
+    "price": 123,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "MQ-2 Gas Sensor (V2)",
+    "category": "Sensors",
+    "price": 157,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "MQ-7 CO Sensor (V2)",
+    "category": "Sensors",
+    "price": 170,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "LDR Photoresistor Module (V2)",
+    "category": "Sensors",
+    "price": 121,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Soil Moisture Sensor (V2)",
+    "category": "Sensors",
+    "price": 129,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Water Level Sensor (V2)",
+    "category": "Sensors",
+    "price": 64,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Sound Sensor Module (V2)",
+    "category": "Sensors",
+    "price": 131,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "IR Obstacle Avoidance (V2)",
+    "category": "Sensors",
+    "price": 32,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Flame Sensor (V2)",
+    "category": "Sensors",
+    "price": 44,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Heart Rate Pulse Sensor (V2)",
+    "category": "Sensors",
+    "price": 128,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "GY-521 MPU6050 Gyro (V2)",
+    "category": "Sensors",
+    "price": 114,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "PIR Motion Sensor HC-SR501 (V3)",
+    "category": "Sensors",
+    "price": 70,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Ultrasonic Sensor HC-SR04 (V3)",
+    "category": "Sensors",
+    "price": 74,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "DHT11 Temp/Humidity (V3)",
+    "category": "Sensors",
+    "price": 147,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "DHT22 Temp/Humidity (V3)",
+    "category": "Sensors",
+    "price": 118,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "MQ-2 Gas Sensor (V3)",
+    "category": "Sensors",
+    "price": 114,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "MQ-7 CO Sensor (V3)",
+    "category": "Sensors",
+    "price": 34,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "LDR Photoresistor Module (V3)",
+    "category": "Sensors",
+    "price": 123,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Soil Moisture Sensor (V3)",
+    "category": "Sensors",
+    "price": 50,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Water Level Sensor (V3)",
+    "category": "Sensors",
+    "price": 162,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Sound Sensor Module (V3)",
+    "category": "Sensors",
+    "price": 121,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "IR Obstacle Avoidance (V3)",
+    "category": "Sensors",
+    "price": 139,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Flame Sensor (V3)",
+    "category": "Sensors",
+    "price": 33,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Heart Rate Pulse Sensor (V3)",
+    "category": "Sensors",
+    "price": 104,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "GY-521 MPU6050 Gyro (V3)",
+    "category": "Sensors",
+    "price": 133,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "PIR Motion Sensor HC-SR501 (V4)",
+    "category": "Sensors",
+    "price": 59,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Ultrasonic Sensor HC-SR04 (V4)",
+    "category": "Sensors",
+    "price": 139,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "DHT11 Temp/Humidity (V4)",
+    "category": "Sensors",
+    "price": 31,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "DHT22 Temp/Humidity (V4)",
+    "category": "Sensors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "MQ-2 Gas Sensor (V4)",
+    "category": "Sensors",
+    "price": 39,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "MQ-7 CO Sensor (V4)",
+    "category": "Sensors",
+    "price": 167,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "LDR Photoresistor Module (V4)",
+    "category": "Sensors",
+    "price": 116,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Soil Moisture Sensor (V4)",
+    "category": "Sensors",
+    "price": 68,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/PIR_sensor.jpg/800px-PIR_sensor.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 1/4W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 1/4W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 1/2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 1/2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 1W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 1W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 2W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 2W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10 Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22 Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47 Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100 Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220 Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 330 Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470 Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 2.2k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 4.7k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 10k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 22k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 47k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 100k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 220k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 470k Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 5W (Pack of 10)",
+    "category": "Resistors",
+    "price": 5,
+    "rating": 4,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Resistor 1M Ohm 5W (Pack of 100)",
+    "category": "Resistors",
+    "price": 30,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Resistors.jpg/800px-Resistors.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 1uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 1uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 2.2uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 2.2uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 4.7uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 4.7uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 10uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 10uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 22uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 22uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 47uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 47uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 100uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 100uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 220uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 220uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 470uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 470uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 1000uF 16V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 1000uF 16V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 1uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 1uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 2.2uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 2.2uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 4.7uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 4.7uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 10uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 10uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 22uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 22uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 47uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 47uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 100uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 100uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 220uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 220uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 470uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 470uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 1000uF 25V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 1000uF 25V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 1uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 1uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 2.2uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 2.2uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 4.7uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 4.7uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 10uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 10uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 22uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 22uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 47uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 47uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 100uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 100uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 220uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 220uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 470uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 470uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 1000uF 50V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 1000uF 50V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 1uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 1uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 2.2uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 2.2uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 4.7uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 4.7uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 10uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 10uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 22uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 22uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 47uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 47uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 100uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 100uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 220uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 220uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 470uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 470uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Electrolytic Capacitor 1000uF 100V (Pack of 5)",
+    "category": "Capacitors",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Ceramic Capacitor 1000uF 100V (Pack of 10)",
+    "category": "Capacitors",
+    "price": 10,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capacitors_of_various_sizes_and_types.jpg/800px-Capacitors_of_various_sizes_and_types.jpg"
+  },
+  {
+    "title": "Red LED 3mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Red LED 5mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Red LED 10mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Red LED SMD 0805 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Red LED SMD 1206 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Red LED Strip 5m (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 150,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Green LED 3mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Green LED 5mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Green LED 10mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Green LED SMD 0805 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Green LED SMD 1206 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Green LED Strip 5m (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 150,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Blue LED 3mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Blue LED 5mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Blue LED 10mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Blue LED SMD 0805 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Blue LED SMD 1206 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Blue LED Strip 5m (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 150,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Yellow LED 3mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Yellow LED 5mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Yellow LED 10mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Yellow LED SMD 0805 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Yellow LED SMD 1206 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Yellow LED Strip 5m (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 150,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "White LED 3mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "White LED 5mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "White LED 10mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "White LED SMD 0805 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "White LED SMD 1206 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "White LED Strip 5m (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 150,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "RGB LED 3mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "RGB LED 5mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "RGB LED 10mm (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "RGB LED SMD 0805 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "RGB LED SMD 1206 (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 10,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "RGB LED Strip 5m (Pack of 10)",
+    "category": "LEDs & Lights",
+    "price": 150,
+    "rating": 4.7,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/LEDs_various_sizes.jpg/800px-LEDs_various_sizes.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 1",
+    "category": "Motors",
+    "price": 81,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 2",
+    "category": "Motors",
+    "price": 82,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 3",
+    "category": "Motors",
+    "price": 83,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 4",
+    "category": "Motors",
+    "price": 84,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 5",
+    "category": "Motors",
+    "price": 85,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 6",
+    "category": "Motors",
+    "price": 86,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 7",
+    "category": "Motors",
+    "price": 87,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 8",
+    "category": "Motors",
+    "price": 88,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 9",
+    "category": "Motors",
+    "price": 89,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 10",
+    "category": "Motors",
+    "price": 90,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 11",
+    "category": "Motors",
+    "price": 91,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 12",
+    "category": "Motors",
+    "price": 92,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 13",
+    "category": "Motors",
+    "price": 93,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 14",
+    "category": "Motors",
+    "price": 94,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 15",
+    "category": "Motors",
+    "price": 95,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 16",
+    "category": "Motors",
+    "price": 96,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 17",
+    "category": "Motors",
+    "price": 97,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 18",
+    "category": "Motors",
+    "price": 98,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 19",
+    "category": "Motors",
+    "price": 99,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 20",
+    "category": "Motors",
+    "price": 100,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 21",
+    "category": "Motors",
+    "price": 101,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 22",
+    "category": "Motors",
+    "price": 102,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 23",
+    "category": "Motors",
+    "price": 103,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 24",
+    "category": "Motors",
+    "price": 104,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 25",
+    "category": "Motors",
+    "price": 105,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 26",
+    "category": "Motors",
+    "price": 106,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 27",
+    "category": "Motors",
+    "price": 107,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 28",
+    "category": "Motors",
+    "price": 108,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 29",
+    "category": "Motors",
+    "price": 109,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Servo Motor SG90 / MG995 Variant 30",
+    "category": "Motors",
+    "price": 110,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Servo_motor.jpg/800px-Servo_motor.jpg"
+  },
+  {
+    "title": "Relay Module 2-Channel 5V",
+    "category": "Modules",
+    "price": 50,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 3-Channel 5V",
+    "category": "Modules",
+    "price": 60,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 4-Channel 5V",
+    "category": "Modules",
+    "price": 70,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 1-Channel 5V",
+    "category": "Modules",
+    "price": 80,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 2-Channel 5V",
+    "category": "Modules",
+    "price": 90,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 3-Channel 5V",
+    "category": "Modules",
+    "price": 100,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 4-Channel 5V",
+    "category": "Modules",
+    "price": 110,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 1-Channel 5V",
+    "category": "Modules",
+    "price": 120,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 2-Channel 5V",
+    "category": "Modules",
+    "price": 130,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 3-Channel 5V",
+    "category": "Modules",
+    "price": 140,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 4-Channel 5V",
+    "category": "Modules",
+    "price": 150,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 1-Channel 5V",
+    "category": "Modules",
+    "price": 160,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 2-Channel 5V",
+    "category": "Modules",
+    "price": 170,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 3-Channel 5V",
+    "category": "Modules",
+    "price": 180,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 4-Channel 5V",
+    "category": "Modules",
+    "price": 190,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 1-Channel 5V",
+    "category": "Modules",
+    "price": 200,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 2-Channel 5V",
+    "category": "Modules",
+    "price": 210,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 3-Channel 5V",
+    "category": "Modules",
+    "price": 220,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 4-Channel 5V",
+    "category": "Modules",
+    "price": 230,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 1-Channel 5V",
+    "category": "Modules",
+    "price": 240,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 2-Channel 5V",
+    "category": "Modules",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 3-Channel 5V",
+    "category": "Modules",
+    "price": 260,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 4-Channel 5V",
+    "category": "Modules",
+    "price": 270,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 1-Channel 5V",
+    "category": "Modules",
+    "price": 280,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 2-Channel 5V",
+    "category": "Modules",
+    "price": 290,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 3-Channel 5V",
+    "category": "Modules",
+    "price": 300,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 4-Channel 5V",
+    "category": "Modules",
+    "price": 310,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 1-Channel 5V",
+    "category": "Modules",
+    "price": 320,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 2-Channel 5V",
+    "category": "Modules",
+    "price": 330,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "Relay Module 3-Channel 5V",
+    "category": "Modules",
+    "price": 340,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Relay_module.jpg/800px-Relay_module.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (1x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (2x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (3x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (4x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (5x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (6x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (7x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (8x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (9x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (10x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (11x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (12x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (13x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (14x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (15x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (16x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (17x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (18x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (19x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "OLED Display 0.96 inch I2C (20x)",
+    "category": "Displays",
+    "price": 120,
+    "rating": 4.9,
+    "isBestSeller": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/16x2_Character_LCD.jpg/800px-16x2_Character_LCD.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 1",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 2",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 3",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 4",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 5",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 6",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 7",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 8",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 9",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 10",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 11",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 12",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 13",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 14",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 15",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 16",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 17",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 18",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 19",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Jumper Wires M-M / M-F / F-F (40pcs) Pack 20",
+    "category": "Cables & Wiring",
+    "price": 45,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Jumper_wires.jpg/800px-Jumper_wires.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V1",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V2",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V3",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V4",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V5",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V6",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V7",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V8",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V9",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V10",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V11",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V12",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V13",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V14",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V15",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V16",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V17",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V18",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V19",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Soldering Iron 60W Kit V20",
+    "category": "Tools",
+    "price": 250,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Soldering_iron.jpg/800px-Soldering_iron.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 1",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 2",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 3",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 4",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 5",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 6",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 7",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 8",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 9",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 10",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 11",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 12",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 13",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 14",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 15",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 16",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 17",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 18",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 19",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 20",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 21",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 22",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 23",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 24",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 25",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 26",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 27",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 28",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 29",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 30",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 31",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 32",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 33",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 34",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 35",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 36",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 37",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 38",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 39",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 40",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 41",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 42",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 43",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 44",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 45",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 46",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 47",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 48",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 49",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  },
+  {
+    "title": "Integrated Circuit IC 555 / 74HC Variant 50",
+    "category": "Modules",
+    "price": 15,
+    "rating": 4.5,
+    "isBestSeller": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/DIP_IC.jpg/800px-DIP_IC.jpg"
+  }
+]

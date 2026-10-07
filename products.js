@@ -15,12 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCart();
     if (typeof setupIosSwitchPill === 'function') setupIosSwitchPill();
     
-    if (window.location.pathname.includes('shop.html')) {
+        if (window.location.pathname.includes('shop.html')) {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('search')) {
             searchQuery = urlParams.get('search').toLowerCase();
             const searchInput = document.getElementById('searchInput');
             if(searchInput) searchInput.value = searchQuery;
+        }
+        if (urlParams.has('category')) {
+            const cat = urlParams.get('category');
+            setTimeout(() => switchCategory(cat), 100);
         }
     }
 
@@ -110,23 +114,20 @@ function injectMobileFixes() {
     const style = document.createElement("style");
     style.id = "mobileFixStyle";
     style.innerHTML = `
+        .category-card.active {
+            border-color: var(--accent-blue) !important;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            background: rgba(10, 132, 255, 0.05);
+        }
         @media (max-width: 576px) {
+            #switchPill { display: none !important; }
+            .ios-tab.active { background: rgba(255,255,255,0.15); border-radius: 99px; }
             .ios-switch-wrapper { justify-content: flex-start !important; margin: 10px 0 20px !important; }
             .ios-glass-switch {
                 width: 100% !important;
                 justify-content: flex-start !important;
-                overflow-x: auto !important;
-                flex-wrap: nowrap !important;
-                padding: 6px !important;
-                border-radius: 16px !important;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
             }
-            .ios-glass-switch::-webkit-scrollbar { display: none; }
-            .ios-tab { flex-shrink: 0 !important; white-space: nowrap !important; font-size: 0.8rem !important; padding: 8px 16px !important;}
-            #switchPill { display: none !important; } 
-            .ios-tab.active { background: rgba(255,255,255,0.15); border-radius: 99px; }
-            
             .category-card { padding: 12px 8px !important; }
             .category-card i { font-size: 1.6rem !important; margin-bottom: 6px !important; }
             .category-card h4 { font-size: 0.85rem !important; }
@@ -398,7 +399,7 @@ function setupIosSwitchPill() {
 
 function switchCategory(cat, btn) {
     if (!window.location.pathname.includes('shop.html')) {
-        window.location.href = 'shop.html';
+        window.location.href = 'shop.html?category=' + encodeURIComponent(cat);
         return;
     }
 
@@ -417,6 +418,13 @@ function switchCategory(cat, btn) {
         if (window.innerWidth > 576) updatePillPosition(btn);
     }
     
+    document.querySelectorAll(".category-card").forEach(c => c.classList.remove("active"));
+    const cards = Array.from(document.querySelectorAll(".category-card"));
+    const targetCard = cards.find(c => c.getAttribute("onclick") && c.getAttribute("onclick").includes("'" + cat + "'"));
+    if (targetCard) {
+        targetCard.classList.add("active");
+    }
+    
     const prodSec = document.getElementById("productsSection");
     if (prodSec) prodSec.scrollIntoView({ behavior: "smooth" });
     renderProducts();
@@ -425,10 +433,23 @@ function switchCategory(cat, btn) {
 function updatePillPosition(element) {
     const pill = document.getElementById("switchPill");
     if(pill && element && window.innerWidth > 576) {
-        pill.style.width = element.offsetWidth + "px";
-        pill.style.transform = "translateX(" + (element.offsetLeft - 4) + "px)";
+        const w = element.offsetWidth;
+        const h = element.offsetHeight;
+        if (w > 0) {
+            pill.style.width = w + "px";
+            pill.style.height = h + "px";
+            pill.style.transform = "translate(" + (element.offsetLeft - 4) + "px, " + (element.offsetTop - 4) + "px)";
+        }
     }
 }
+
+window.addEventListener('load', () => {
+    if (typeof setupIosSwitchPill === 'function') setTimeout(setupIosSwitchPill, 100);
+});
+window.addEventListener('resize', () => {
+    if (typeof setupIosSwitchPill === 'function') setupIosSwitchPill();
+});
+
 
 /* ============================================================
    AD BANNERS - rendered only from the "banners" collection
@@ -768,7 +789,6 @@ function updateCartQty(id, change) {
     }
 }
 
-
 /* ============================================================
    ADS - promo cards rendered only from the "ads" collection
    ============================================================ */
@@ -820,3 +840,18 @@ function renderAds() {
         grid.appendChild(card);
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

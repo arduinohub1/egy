@@ -11,6 +11,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
     <script src="firebase-config.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -209,10 +210,25 @@
                 </div>
 
                 <h2>Payment</h2>
-                <div class="payment-box">
-                    <i class="fa-solid fa-money-bill-wave" style="font-size: 1.5rem; margin-bottom:10px; color:#535353;"></i><br>
-                    <strong>Cash on Delivery (COD)</strong><br>
-                    Pay with cash upon delivery.
+                <div class="payment-methods" style="margin-bottom: 20px;">
+                    <div class="payment-option" style="padding: 15px; border: 1px solid var(--card-border); border-radius: 8px; margin-bottom: 10px; background: rgba(0,0,0,0.1);">
+                        <label style="display:flex; align-items:center; cursor:pointer; width:100%;">
+                            <input type="radio" name="paymentMethod" value="COD" checked onchange="togglePaymentDetails()" style="margin-right: 10px;">
+                            <strong>Cash on Delivery (COD)</strong>
+                        </label>
+                    </div>
+                    <div class="payment-option" style="padding: 15px; border: 1px solid var(--card-border); border-radius: 8px; background: rgba(0,0,0,0.1);">
+                        <label style="display:flex; align-items:center; cursor:pointer; width:100%;">
+                            <input type="radio" name="paymentMethod" value="Instapay/VF" onchange="togglePaymentDetails()" style="margin-right: 10px;">
+                            <strong>Instapay / Vodafone Cash</strong>
+                        </label>
+                        <div id="onlinePaymentDetails" style="display:none; margin-top: 15px; padding-left: 25px; font-size: 0.9rem; color: var(--text-muted);">
+                            <p style="margin-bottom: 10px;">Please transfer the total amount to this number:<br>
+                            <strong style="color: var(--accent-cyan); font-size: 1.1rem;">01002218172</strong></p>
+                            <p style="margin-bottom: 5px;">Upload a screenshot of the transfer:</p>
+                            <input type="file" id="paymentScreenshot" accept="image/*" class="form-control" style="padding: 8px; font-size: 0.8rem; background: var(--bg-card);">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="footer-actions">
@@ -238,7 +254,7 @@
                 </div>
                 <div class="summary-line">
                     <span>Shipping</span>
-                    <span style="color:var(--text-muted);">Calculated at next step</span>
+                    <span id="cShipping" style="color:var(--text-main); font-weight:600;">EGP 80.00</span>
                 </div>
             </div>
 
@@ -320,10 +336,16 @@
             renderCheckoutCart();
         });
 
+        function togglePaymentDetails() {
+            const method = document.querySelector('input[name="paymentMethod"]:checked').value;
+            document.getElementById('onlinePaymentDetails').style.display = (method === 'Instapay/VF') ? 'block' : 'none';
+        }
+
         function renderCheckoutCart() {
             const cartItems = readJSON("arduino_hub_cart", []);
             const container = document.getElementById("checkoutCartItems");
             let total = 0;
+            const shippingFee = 80;
 
             if (cartItems.length === 0) {
                 container.innerHTML = "<p style='color:#94a3b8; font-size:0.9rem;'>Your cart is empty.</p>";
@@ -348,22 +370,66 @@
             container.innerHTML = html;
 
             document.getElementById("cSubtotal").innerText = "EGP " + total.toFixed(2);
-            document.getElementById("cTotal").innerText = total.toFixed(2);
+            document.getElementById("cTotal").innerText = (total + shippingFee).toFixed(2);
         }
 
-        function submitOrder(e) {
+        async function submitOrder(e) {
             e.preventDefault();
             
             const cartItems = readJSON("arduino_hub_cart", []);
             if(cartItems.length === 0) return alert("Your cart is empty!");
 
             const btn = document.getElementById("placeOrderBtn");
-            if (btn.disabled) return; // prevent double submission
+            if (btn.disabled) return;
+            
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+            let screenshotUrl = "";
+
+            if (paymentMethod === "Instapay/VF") {
+                const fileInput = document.getElementById('paymentScreenshot');
+                if (fileInput.files.length === 0) {
+                    alert("Please upload a screenshot of your transfer.");
+                    return;
+                }
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right:8px;"></i> Processing Image...';
+                try {
+                    const file = fileInput.files[0];
+                    screenshotUrl = await new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            const img = new Image();
+                            img.onload = () => {
+                                const canvas = document.createElement('canvas');
+                                const MAX_WIDTH = 500;
+                                const scaleSize = MAX_WIDTH / img.width;
+                                canvas.width = MAX_WIDTH;
+                                canvas.height = img.height * scaleSize;
+                                const ctx = canvas.getContext('2d');
+                                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                                resolve(canvas.toDataURL('image/jpeg', 0.6));
+                            };
+                            img.onerror = () => reject(new Error("Invalid image"));
+                            img.src = e.target.result;
+                        };
+                        reader.onerror = () => reject(new Error("File read error"));
+                        reader.readAsDataURL(file);
+                    });
+                } catch(err) {
+                    alert("Image processing failed: " + err.message);
+                    btn.disabled = false;
+                    btn.innerHTML = "Complete order";
+                    return;
+                }
+            }
+
             btn.disabled = true;
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right:8px;"></i> Processing Order...';
 
             const user = readJSON("arduino_hub_current_user", null);
-            let totalAmount = cartItems.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            const shippingFee = 80;
+            let subtotal = cartItems.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            let totalAmount = subtotal + shippingFee;
 
             const fullName = (document.getElementById("cFirstName").value + " " + document.getElementById("cLastName").value).trim();
             // Skip empty parts (e.g. optional apartment) so the address has no ", ," gaps
@@ -384,6 +450,8 @@
                 shippingAddress: fullAddress,
                 items: cartItems,
                 totalAmount: totalAmount,
+                paymentMethod: paymentMethod,
+                paymentScreenshot: screenshotUrl,
                 status: "Pending",
                 createdAt: firebase.firestore.FieldValue.serverTimestamp()
             };

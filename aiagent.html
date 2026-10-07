@@ -382,27 +382,18 @@
 
         /* ---------------- AI ---------------- */
         function buildMessages(userPrompt) {
-            const catalogText = catalog.slice(0, 250).map(function(p) {
-                return p.id + " | " + p.title + " | " + (p.category || "") + " | EGP " + unitPrice(p).toFixed(2);
-            }).join("\n") || "(the store catalog is currently empty)";
-
             const system =
                 "You are the project assistant of 'Arduino Hub', an electronics store. " +
                 "The user describes an electronics / Arduino / ESP32 / robotics project. " +
-                "Work out every component needed to build it, then match them against the STORE CATALOG below.\n\n" +
+                "Work out every component needed to build it.\n\n" +
                 "RULES:\n" +
                 "- Reply with ONE valid JSON object only, no markdown, no extra text.\n" +
                 "- Write all human-readable text in the SAME language as the user's request (Arabic or English). JSON keys stay in English.\n" +
-                "- 'store_items': components that exist in the catalog. 'id' MUST be copied exactly from the catalog. Include a short 'reason'.\n" +
-                "- 'other_items': required components that are NOT in the catalog (name, qty, reason).\n" +
-                "- Prefer catalog items whenever a reasonable match exists (e.g. an Arduino Uno board, HC-SR04 sensor, jumper wires).\n" +
+                "- 'components_needed': list every electronic component, module, or hardware piece required.\n" +
                 "- Quantities are integers between 1 and 20. Keep the list realistic and not bloated.\n" +
-                "- If the request is not an electronics project, return empty arrays and explain politely in 'overview'.\n\n" +
+                "- If the request is not an electronics project, return empty array and explain politely in 'overview'.\n\n" +
                 "JSON SHAPE:\n" +
-                "{\"project_title\":\"string\",\"overview\":\"2-3 sentences\",\"steps\":[\"3-6 short build steps\"]," +
-                "\"store_items\":[{\"id\":\"catalog id\",\"name\":\"catalog title\",\"qty\":1,\"reason\":\"why\"}]," +
-                "\"other_items\":[{\"name\":\"string\",\"qty\":1,\"reason\":\"why\"}]}\n\n" +
-                "STORE CATALOG (id | title | category | price):\n" + catalogText;
+                "{\n  \"project_title\": \"string\",\n  \"overview\": \"2-3 sentences\",\n  \"steps\": [\"3-6 short build steps\"],\n  \"components_needed\": [{\"name\": \"generic component name\", \"qty\": 1, \"reason\": \"why\"}]\n}";
 
             return [
                 { role: "system", content: system },
@@ -429,35 +420,59 @@
                 if (byId) return byId;
             }
             const name = String(item.name || "").toLowerCase().trim();
-            if (name) {
-                return catalog.find(function(p) { return (p.title || "").toLowerCase() === name; }) || null;
-            }
-            return null;
+            if (!name) return null;
+            
+            const exact = catalog.find(function(p) { return (p.title || "").toLowerCase() === name; });
+            if (exact) return exact;
+
+            const words = name.replace(/[^a-z0-9]/g, ' ').split(/\s+/).filter(function(w){ return w.length > 1; });
+            if (!words.length) return null;
+
+            let bestMatch = null;
+            let bestScore = 0;
+            
+            catalog.forEach(function(p) {
+                const pTitle = (p.title || "").toLowerCase();
+                let matches = 0;
+                words.forEach(function(w) {
+                    if (pTitle.indexOf(w) > -1) matches++;
+                });
+                if (matches > 0) {
+                    const score = (matches / words.length) - (pTitle.length * 0.001);
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestMatch = p;
+                    }
+                }
+            });
+            
+            return bestScore > 0.3 ? bestMatch : null;
         }
 
         function normalizePlan(raw) {
-            const merged = {};   // product id -> { product, qty, reason }
+            const merged = {};
             const extra = [];
-            (Array.isArray(raw.store_items) ? raw.store_items : []).forEach(function(it) {
+            const allItems = (Array.isArray(raw.components_needed) ? raw.components_needed : [])
+                .concat(Array.isArray(raw.store_items) ? raw.store_items : [])
+                .concat(Array.isArray(raw.other_items) ? raw.other_items : []);
+
+            allItems.forEach(function(it) {
                 const product = findProduct(it);
                 const qty = Math.min(20, Math.max(1, parseInt(it.qty, 10) || 1));
                 if (product) {
                     if (merged[product.id]) merged[product.id].qty = Math.min(20, merged[product.id].qty + qty);
                     else merged[product.id] = { product: product, qty: qty, reason: it.reason || "" };
                 } else if (it.name) {
-                    extra.push({ name: it.name, qty: qty, reason: it.reason || "" });   // AI hallucinated an id -> treat as not in store
+                    extra.push({ name: it.name, qty: qty, reason: it.reason || "" });
                 }
             });
-            const others = (Array.isArray(raw.other_items) ? raw.other_items : []).map(function(it) {
-                return { name: it.name || "Component", qty: Math.min(20, Math.max(1, parseInt(it.qty, 10) || 1)), reason: it.reason || "" };
-            }).concat(extra);
 
             return {
                 title: raw.project_title || "Your project",
                 overview: raw.overview || "",
                 steps: Array.isArray(raw.steps) ? raw.steps : [],
                 storeItems: Object.keys(merged).map(function(k) { return merged[k]; }),
-                otherItems: others
+                otherItems: extra
             };
         }
 
@@ -592,3 +607,4 @@
     </script>
 </body>
 </html>
+

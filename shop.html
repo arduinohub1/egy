@@ -1028,7 +1028,13 @@
                 <button class="ios-tab active" onclick="switchCategory('All', this)">All Products</button>
                 <button class="ios-tab" onclick="switchCategory('Microcontrollers', this)">Microcontrollers</button>
                 <button class="ios-tab" onclick="switchCategory('Sensors', this)">Sensors</button>
-                <button class="ios-tab" onclick="switchCategory('Wires & Modules', this)">Wires & Accessories</button>
+                <button class="ios-tab" onclick="switchCategory('Motors', this)">Motors & DC</button>
+                <button class="ios-tab" onclick="switchCategory('Power', this)">Power Supplies</button>
+                <button class="ios-tab" onclick="switchCategory('Displays', this)">Displays</button>
+                <button class="ios-tab" onclick="switchCategory('Wires', this)">Wires & Cables</button>
+                <button class="ios-tab" onclick="switchCategory('Modules', this)">Modules</button>
+                <button class="ios-tab" onclick="switchCategory('Components', this)">Components</button>
+                <button class="ios-tab" onclick="switchCategory('Tools', this)">Tools</button>
             </div>
         </div>
     </section>
@@ -1040,18 +1046,39 @@
     <div class="categories-grid">
         <div class="category-card" onclick="switchCategory('Microcontrollers')">
             <i class="fa-solid fa-microchip" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Arduino & Boards</h4>
-            <span>Explore &rarr;</span>
+            <h4>Boards</h4>
         </div>
         <div class="category-card" onclick="switchCategory('Sensors')">
             <i class="fa-solid fa-wifi" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
             <h4>Sensors</h4>
-            <span>Explore &rarr;</span>
         </div>
-        <div class="category-card" onclick="switchCategory('Wires & Modules')">
+        <div class="category-card" onclick="switchCategory('Motors')">
+            <i class="fa-solid fa-gear" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
+            <h4>Motors & DC</h4>
+        </div>
+        <div class="category-card" onclick="switchCategory('Power')">
+            <i class="fa-solid fa-battery-full" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
+            <h4>Power</h4>
+        </div>
+        <div class="category-card" onclick="switchCategory('Displays')">
+            <i class="fa-solid fa-tv" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
+            <h4>Displays</h4>
+        </div>
+        <div class="category-card" onclick="switchCategory('Wires')">
             <i class="fa-solid fa-plug" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Wires & Accessories</h4>
-            <span>Explore &rarr;</span>
+            <h4>Wires</h4>
+        </div>
+        <div class="category-card" onclick="switchCategory('Modules')">
+            <i class="fa-solid fa-cubes" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
+            <h4>Modules</h4>
+        </div>
+        <div class="category-card" onclick="switchCategory('Components')">
+            <i class="fa-solid fa-bolt" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
+            <h4>Components</h4>
+        </div>
+        <div class="category-card" onclick="switchCategory('Tools')">
+            <i class="fa-solid fa-screwdriver-wrench" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
+            <h4>Tools</h4>
         </div>
     </div>
 
@@ -1125,3 +1152,4 @@
     <script src="ai-chatbot.js"></script>
 </body>
 </html>
+
