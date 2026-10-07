@@ -1150,6 +1150,17 @@
     <!-- AI Chatbot Widget (floating robot button) -->
     <script src="site-config.js"></script>
     <script src="ai-chatbot.js"></script>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="icon-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: none; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script>
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            if (btn) btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+    </script>
 </body>
 </html>
 

@@ -67,6 +67,7 @@
         <div class="admin-tabs">
             <button class="admin-tab active" onclick="switchAdminTab('products', this)"><i class="fa-solid fa-box"></i> Manage Products</button>
             <button class="admin-tab" onclick="switchAdminTab('orders', this)"><i class="fa-solid fa-cart-flatbed"></i> Customer Orders</button>
+            <button class="admin-tab" onclick="switchAdminTab('users', this)"><i class="fa-solid fa-users"></i> Registered Users</button>
             <button class="admin-tab" onclick="switchAdminTab('banners', this)"><i class="fa-solid fa-rectangle-ad"></i> Ad Banners</button>
             <button class="admin-tab" onclick="switchAdminTab('ads', this)"><i class="fa-solid fa-bullhorn"></i> Ads</button>
         </div>
@@ -75,6 +76,7 @@
         <div id="tab-products" class="tab-content active">
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 15px;">
                 <h3 style="font-size: 1.5rem; margin:0;">Store Catalog</h3>
+                  <input type="text" id="adminProductSearch" placeholder="Search products by name..." onkeyup="renderAdminTable()" style="background:#1e293b; color:white; border:1px solid rgba(255,255,255,0.1); padding:8px 12px; border-radius:6px; outline:none; margin-left:15px; flex:1; min-width:200px;">
                 <button onclick="openModal()" style="background:#10b981; color:white; border:none; padding:12px 24px; border-radius:8px; cursor:pointer; font-weight:bold; font-size: 1rem; transition: 0.2s;">
                     <i class="fa-solid fa-plus"></i> Add New Product
                 </button>
@@ -119,7 +121,26 @@
             </div>
         </div>
 
-                <!-- ADS TAB -->
+                
+        <!-- USERS TAB -->
+        <div id="tab-users" class="tab-content">
+            <h3 style="font-size: 1.5rem; margin-top:0;">Registered Users</h3>
+            <p style="color:#94a3b8; margin-bottom: 20px;">View customers who have created accounts on the store.</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminUsersTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- ADS TAB -->
         <div id="tab-ads" class="tab-content">
             <h3 style="font-size: 1.5rem; margin-top:0;">Homepage Ads</h3>
             <p style="color:#94a3b8; margin-bottom: 20px;">Promo cards shown on the home page (below the banners). Add, edit or remove as many as you like - changes go live instantly.</p>
@@ -253,6 +274,14 @@
                 });
 
                 // Orders
+                // Users
+                db.collection("users").orderBy("createdAt", "desc").onSnapshot(snapshot => {
+                    usersList = [];
+                    snapshot.forEach(doc => usersList.push({ id: doc.id, ...doc.data() }));
+                    renderUsersTable();
+                }, error => console.error("Admin users error:", error));
+
+                // Orders
                 db.collection("orders").orderBy("createdAt", "desc").onSnapshot(snapshot => {
                     orders = [];
                     snapshot.forEach(doc => orders.push({ id: doc.id, ...doc.data() }));
@@ -273,6 +302,36 @@
                 }, error => console.error("Admin banners error:", error));
             }
         });
+
+        
+        function renderUsersTable() {
+            const tbody = document.getElementById("adminUsersTableBody");
+            if (!tbody) return;
+            tbody.innerHTML = "";
+            if (usersList.length === 0) {
+                tbody.innerHTML = "<tr><td colspan='4' style='text-align:center; color:#94a3b8;'>No users found.</td></tr>";
+                return;
+            }
+            usersList.forEach(u => {
+                const dateObj = u.createdAt && u.createdAt.toDate ? u.createdAt.toDate() : new Date();
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td style="font-weight:600;">${u.name || 'N/A'}</td>
+                    <td style="color:#94a3b8;">${u.email || 'N/A'}</td>
+                    <td style="color:#94a3b8;">${u.phone || 'N/A'}</td>
+                    <td style="font-size:0.85rem; color:#cbd5e1;">${dateObj.toLocaleDateString()}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function deleteOrder(id) {
+            if (confirm("Are you sure you want to permanently delete this order?")) {
+                firebase.firestore().collection("orders").doc(id).delete().catch(err => {
+                    alert("Database Error: " + err.message);
+                });
+            }
+        }
 
         function renderOrdersTable() {
             const tbody = document.getElementById("adminOrdersTableBody");
@@ -308,12 +367,15 @@
                         <span style="background:rgba(255,255,255,0.05); border:1px solid ${statusColor}; color:${statusColor}; padding:4px 10px; border-radius:99px; font-size:0.8rem; font-weight:600;">${o.status}</span>
                     </td>
                     <td>
-                        <select onchange="updateOrderStatus('${o.id}', this.value)" style="background:#1e293b; color:white; border:1px solid rgba(255,255,255,0.1); padding:6px; border-radius:6px; outline:none; cursor:pointer;">
+                        <div style="display:flex; gap:8px;">
+                          <select onchange="updateOrderStatus('${o.id}', this.value)" style="background:#1e293b; color:white; border:1px solid rgba(255,255,255,0.1); padding:6px; border-radius:6px; outline:none; cursor:pointer; flex:1;">
                             <option value="Pending" ${o.status === 'Pending' ? 'selected' : ''}>Pending</option>
                             <option value="Shipped" ${o.status === 'Shipped' ? 'selected' : ''}>Shipped</option>
                             <option value="Delivered" ${o.status === 'Delivered' ? 'selected' : ''}>Delivered</option>
                         </select>
-                    </td>
+                          <button class="action-btn delete" onclick="deleteOrder('${o.id}')" title="Delete Order"><i class="fa-solid fa-trash"></i></button>
+                      </div>
+                      </td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -341,7 +403,9 @@
         function renderAdminTable() {
             const tbody = document.getElementById("adminTableBody");
             tbody.innerHTML = "";
-            products.forEach(p => {
+            const query = (document.getElementById("adminProductSearch") ? document.getElementById("adminProductSearch").value.toLowerCase() : "");
+            const filteredProducts = query ? products.filter(p => (p.title || "").toLowerCase().includes(query)) : products;
+            filteredProducts.forEach(p => {
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
                     <td><img src="${p.image}"></td>
@@ -603,6 +667,7 @@
         // --- BANNER MANAGEMENT (Firestore collection: "banners") ---
         // Each doc: { image: <compressed dataURL>, title, link, createdAt }
         let banners = [];
+        let usersList = [];
         let pendingBannerImage = "";
         let editingBannerId = "";
         const BANNER_MAX_CHARS = 750000;   // keep each Firestore doc safely below the 1 MiB limit
@@ -773,4 +838,5 @@
 
 </body>
 </html>
+
 
