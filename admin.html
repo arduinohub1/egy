@@ -7,11 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+    :root {
+        --bg-dark: #070a13;
+        --bg-card: #0f172a;
+        --card-border: rgba(255, 255, 255, 0.08);
+        --glass-bg: rgba(15, 23, 42, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.12);
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --input-bg: #080c14;
+        --table-header: #1e293b;
+    }
+
         body { background: #070a13; color: white; font-family: 'Inter', sans-serif; margin: 0; }
-        header { padding: 20px 5%; background: rgba(15,23,42,0.9); display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        header { padding: 20px 5%; background: rgba(15,23,42,0.9); display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
         .admin-container { padding: 40px 5%; max-width: 1350px; margin: 0 auto; }
         
-        .admin-tabs { display: flex; gap: 15px; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; overflow-x: auto;}
+        .admin-tabs { display: flex; gap: 15px; margin-bottom: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; overflow-x: auto;}
         .admin-tab { background: none; border: none; color: #94a3b8; font-size: 1.1rem; font-weight: 600; cursor: pointer; padding: 10px 20px; border-radius: 8px; transition: 0.3s; white-space: nowrap;}
         .admin-tab.active { background: rgba(56, 189, 248, 0.1); color: #38bdf8; }
 
@@ -20,7 +32,7 @@
 
         .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #0f172a; min-width: 800px; }
-        th, td { padding: 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        th, td { padding: 16px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
         th { background: #1e293b; color: #38bdf8; font-weight: 600; }
         td img { width: 50px; height: 50px; object-fit: contain; background: rgba(0,0,0,0.3); border-radius: 6px; padding: 4px; }
         
@@ -32,19 +44,19 @@
 
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 20px; backdrop-filter: blur(5px);}
         .modal.open { display: flex; }
-        .modal-content { background: #0d1322; padding: 30px; border-radius: 20px; width: 100%; max-width: 500px; border: 1px solid rgba(255,255,255,0.1); max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.6);}
+        .modal-content { background: #0d1322; padding: 30px; border-radius: 20px; width: 100%; max-width: 500px; border: 1px solid rgba(255, 255, 255, 0.1); max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.6);}
         .modal-content label { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px; margin-top: 14px;}
-        .modal-content input[type="text"], .modal-content input[type="number"], .modal-content input[type="url"], .modal-content select { width: 100%; background: #080c14; border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; color: white; outline: none; box-sizing: border-box; }
+        .modal-content input[type="text"], .modal-content input[type="number"], .modal-content input[type="url"], .modal-content select { width: 100%; background: #080c14; border: 1px solid rgba(255, 255, 255, 0.1); padding: 12px; border-radius: 8px; color: white; outline: none; box-sizing: border-box; }
         .modal-content input:focus, .modal-content select:focus { border-color: #38bdf8; }
         
         .upload-area { border: 2px dashed rgba(255,255,255,0.2); padding: 20px; text-align: center; border-radius: 12px; cursor: pointer; margin-top: 8px; transition: 0.3s; }
         .upload-area:hover { border-color: #38bdf8; background: rgba(56, 189, 248, 0.05); }
 
-        .promo-editor-card { background: #0f172a; border: 1px solid rgba(255,255,255,0.1); padding: 24px; border-radius: 12px; margin-bottom: 20px;}
+        .promo-editor-card { background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1); padding: 24px; border-radius: 12px; margin-bottom: 20px;}
         .promo-editor-card h4 { margin-top:0; color: #38bdf8; font-size: 1.2rem;}
         .promo-input-group { margin-bottom: 12px; }
         .promo-input-group label { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;}
-        .promo-input-group input { width: 100%; background: #080c14; border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; color: white; box-sizing: border-box;}
+        .promo-input-group input { width: 100%; background: #080c14; border: 1px solid rgba(255, 255, 255, 0.1); padding: 10px; border-radius: 8px; color: white; box-sizing: border-box;}
     </style>
 
     <!-- Firebase Compat SDKs -->
@@ -64,6 +76,22 @@
 
     <div class="admin-container">
         
+        <!-- ADMIN DASHBOARD STATS -->
+        <div style="display:flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap;">
+            <div style="flex:1; background:#0f172a; border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:20px; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.1); min-width: 150px;">
+                <div style="color:#94a3b8; font-size:0.9rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Total Orders</div>
+                <div id="stat-orders" style="font-size:2.2rem; font-weight:bold; color:#38bdf8;">0</div>
+            </div>
+            <div style="flex:1; background:#0f172a; border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:20px; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.1); min-width: 150px;">
+                <div style="color:#94a3b8; font-size:0.9rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Total Customers</div>
+                <div id="stat-users" style="font-size:2.2rem; font-weight:bold; color:#10b981;">0</div>
+            </div>
+            <div style="flex:1; background:#0f172a; border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:20px; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.1); min-width: 150px;">
+                <div style="color:#94a3b8; font-size:0.9rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Total Products</div>
+                <div id="stat-products" style="font-size:2.2rem; font-weight:bold; color:#f59e0b;">0</div>
+            </div>
+        </div>
+        
         <div class="admin-tabs">
             <button class="admin-tab active" onclick="switchAdminTab('products', this)"><i class="fa-solid fa-box"></i> Manage Products</button>
             <button class="admin-tab" onclick="switchAdminTab('orders', this)"><i class="fa-solid fa-cart-flatbed"></i> Customer Orders</button>
@@ -76,7 +104,7 @@
         <div id="tab-products" class="tab-content active">
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 15px;">
                 <h3 style="font-size: 1.5rem; margin:0;">Store Catalog</h3>
-                  <input type="text" id="adminProductSearch" placeholder="Search products by name..." onkeyup="renderAdminTable()" style="background:#1e293b; color:white; border:1px solid rgba(255,255,255,0.1); padding:8px 12px; border-radius:6px; outline:none; margin-left:15px; flex:1; min-width:200px;">
+                  <input type="text" id="adminProductSearch" placeholder="Search products by name..." onkeyup="renderAdminTable()" style="background:#1e293b; color: white; border:1px solid rgba(255, 255, 255, 0.1); padding:8px 12px; border-radius:6px; outline:none; margin-left:15px; flex:1; min-width:200px;">
                 <button onclick="openModal()" style="background:#10b981; color:white; border:none; padding:12px 24px; border-radius:8px; cursor:pointer; font-weight:bold; font-size: 1rem; transition: 0.2s;">
                     <i class="fa-solid fa-plus"></i> Add New Product
                 </button>
@@ -123,24 +151,36 @@
 
                 
         <!-- USERS TAB -->
-        <div id="tab-users" class="tab-content">
-            <h3 style="font-size: 1.5rem; margin-top:0;">Registered Users</h3>
-            <p style="color:#94a3b8; margin-bottom: 20px;">View customers who have created accounts on the store.</p>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Created At</th>
-                        </tr>
-                    </thead>
-                    <tbody id="adminUsersTableBody"></tbody>
-                </table>
-            </div>
-        </div>
-        <!-- ADS TAB -->
+          <div id="tab-users" class="tab-content">
+              <h3 style="font-size: 1.5rem; margin-top:0;">Registered Users</h3>
+              <p style="color:#94a3b8; margin-bottom: 20px;">View customers who have created accounts on the store.</p>
+              
+              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
+                  <input type="text" id="adminUserSearch" placeholder="Search by name, email, or phone..." onkeyup="renderUsersTable()" style="background:#1e293b; color:white; border:1px solid rgba(255,255,255,0.1); padding:8px 12px; border-radius:6px; outline:none; flex:1; min-width:200px;">
+                  <select id="adminUserFilter" onchange="renderUsersTable()" style="background:#1e293b; color:white; border:1px solid rgba(255,255,255,0.1); padding:8px 12px; border-radius:6px; outline:none;">
+                      <option value="all">All Users</option>
+                      <option value="active">Active</option>
+                      <option value="suspended">Suspended</option>
+                      <option value="premium">Premium</option>
+                      <option value="regular">Regular</option>
+                  </select>
+              </div>
+
+              <div class="table-responsive">
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Email & Phone</th>
+                              <th>Status & Date</th>
+                              <th>Actions</th>
+                          </tr>
+                      </thead>
+                      <tbody id="adminUsersTableBody"></tbody>
+                  </table>
+              </div>
+          </div>
+          <!-- ADS TAB -->
         <div id="tab-ads" class="tab-content">
             <h3 style="font-size: 1.5rem; margin-top:0;">Homepage Ads</h3>
             <p style="color:#94a3b8; margin-bottom: 20px;">Promo cards shown on the home page (below the banners). Add, edit or remove as many as you like - changes go live instantly.</p>
@@ -155,7 +195,7 @@
                 <div class="promo-input-group"><label>Button Link <span style="color:#64748b; font-size:0.75rem;">(page or full URL, default shop.html)</span></label><input type="text" id="adLink" maxlength="300" placeholder="shop.html"></div>
                 <div style="display:flex; gap:12px;">
                     <button type="button" id="adSaveBtn" onclick="saveAd()" style="flex:1; background:#2563eb; color:white; border:none; padding:14px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1rem;"><i class="fa-solid fa-floppy-disk"></i> Save Ad</button>
-                    <button type="button" id="adCancelBtn" onclick="resetAdForm()" style="display:none; flex:1; background:rgba(255,255,255,0.1); color:white; border:none; padding:14px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1rem;">Cancel Edit</button>
+                    <button type="button" id="adCancelBtn" onclick="resetAdForm()" style="display:none; flex:1; background:rgba(255, 255, 255, 0.1); color:white; border:none; padding:14px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:1rem;">Cancel Edit</button>
                 </div>
             </div>
 
@@ -178,7 +218,7 @@
                     <input type="file" id="bannerFile" accept="image/*" onchange="handleBannerImage(event)" style="display:none;">
                 </div>
                 <div style="text-align:center; margin-top: 15px;">
-                    <img id="bannerPreview" src="" alt="" style="display:none; width:100%; max-width:560px; aspect-ratio:16/5; object-fit:cover; border-radius:10px; border:1px solid rgba(255,255,255,0.1); margin:0 auto;">
+                    <img id="bannerPreview" src="" alt="" style="display:none; width:100%; max-width:560px; aspect-ratio:16/5; object-fit:cover; border-radius:10px; border:1px solid rgba(255, 255, 255, 0.1); margin:0 auto;">
                 </div>
                 <button id="bannerAddBtn" type="button" onclick="addBanner()" style="margin-top:18px; background:#10b981; color:white; border:none; padding:14px 30px; border-radius:8px; cursor:pointer; font-weight:bold; font-size: 1rem; width: 100%;"><i class="fa-solid fa-plus"></i> Add Banner</button>
             </div>
@@ -222,7 +262,7 @@
                 </div>
             </div>
 
-            <label style="display:flex; align-items:center; gap:8px; margin-top:20px; cursor:pointer; font-size:0.95rem; color:white; background:rgba(255,255,255,0.05); padding:12px; border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
+            <label style="display:flex; align-items:center; gap:8px; margin-top:20px; cursor:pointer; font-size:0.95rem; color:white; background:rgba(255, 255, 255, 0.05); padding:12px; border-radius:8px; border:1px solid rgba(255, 255, 255, 0.1);">
                 <input type="checkbox" id="pBestSeller" style="width:18px; height:18px; cursor:pointer; accent-color:#38bdf8;">
                 <i class="fa-solid fa-star" style="color:#f59e0b;"></i> Mark as Featured / Best Seller (Shows on Home Page)
             </label>
@@ -236,12 +276,12 @@
             <input type="hidden" id="pimageBase64">
             
             <div style="text-align: center; margin-top: 15px;">
-                <img id="imgPreview" src="" style="width:120px; height:120px; object-fit:contain; display:none; border-radius:8px; background:rgba(0,0,0,0.3); padding:10px; border: 1px solid rgba(255,255,255,0.1); margin: 0 auto;">
+                <img id="imgPreview" src="" style="width:120px; height:120px; object-fit:contain; display:none; border-radius:8px; background:rgba(0,0,0,0.3); padding:10px; border: 1px solid rgba(255, 255, 255, 0.1); margin: 0 auto;">
             </div>
             
             <div style="display:flex; gap:12px; margin-top: 25px;">
                 <button type="button" onclick="saveProduct(event)" style="flex:1; background:#2563eb; color:white; border:none; padding:14px; border-radius:8px; cursor:pointer; font-weight:bold; font-size: 1rem;">Save Product</button>
-                <button onclick="closeModal()" style="flex:1; background:rgba(255,255,255,0.1); color:white; border:none; padding:14px; border-radius:8px; cursor:pointer; font-weight:bold; font-size: 1rem;">Cancel</button>
+                <button onclick="closeModal()" style="flex:1; background:rgba(255, 255, 255, 0.1); color:white; border:none; padding:14px; border-radius:8px; cursor:pointer; font-weight:bold; font-size: 1rem;">Cancel</button>
             </div>
         </div>
     </div>
@@ -268,6 +308,7 @@
                 db.collection("products").onSnapshot(snapshot => {
                     products = [];
                     snapshot.forEach(doc => products.push({ id: doc.id, ...doc.data() }));
+                    if (document.getElementById('stat-products')) document.getElementById('stat-products').innerText = products.length;
                     renderAdminTable();
                 }, error => {
                     console.error("Admin Firestore Error:", error);
@@ -278,6 +319,7 @@
                 db.collection("users").orderBy("createdAt", "desc").onSnapshot(snapshot => {
                     usersList = [];
                     snapshot.forEach(doc => usersList.push({ id: doc.id, ...doc.data() }));
+                    if (document.getElementById('stat-users')) document.getElementById('stat-users').innerText = usersList.length;
                     renderUsersTable();
                 }, error => console.error("Admin users error:", error));
 
@@ -285,6 +327,7 @@
                 db.collection("orders").orderBy("createdAt", "desc").onSnapshot(snapshot => {
                     orders = [];
                     snapshot.forEach(doc => orders.push({ id: doc.id, ...doc.data() }));
+                    if (document.getElementById('stat-orders')) document.getElementById('stat-orders').innerText = orders.length;
                     renderOrdersTable();
                 });
 
@@ -308,21 +351,84 @@
             const tbody = document.getElementById("adminUsersTableBody");
             if (!tbody) return;
             tbody.innerHTML = "";
-            if (usersList.length === 0) {
+            
+            const query = (document.getElementById("adminUserSearch") ? document.getElementById("adminUserSearch").value.toLowerCase() : "");
+            const filter = (document.getElementById("adminUserFilter") ? document.getElementById("adminUserFilter").value : "all");
+
+            const filteredUsers = usersList.filter(u => {
+                const searchMatch = (u.name || "").toLowerCase().includes(query) || (u.email || "").toLowerCase().includes(query) || (u.phone || "").toLowerCase().includes(query);
+                if (!searchMatch) return false;
+                
+                if (filter === "active" && u.isSuspended) return false;
+                if (filter === "suspended" && !u.isSuspended) return false;
+                if (filter === "premium" && !u.isPremium) return false;
+                if (filter === "regular" && u.isPremium) return false;
+                
+                return true;
+            });
+
+            if (filteredUsers.length === 0) {
                 tbody.innerHTML = "<tr><td colspan='4' style='text-align:center; color:#94a3b8;'>No users found.</td></tr>";
                 return;
             }
-            usersList.forEach(u => {
+            
+            filteredUsers.forEach(u => {
                 const dateObj = u.createdAt && u.createdAt.toDate ? u.createdAt.toDate() : new Date();
                 const tr = document.createElement("tr");
+                
+                const statusBadge = u.isSuspended ? '<span style="background:rgba(239, 68, 68, 0.1); color:#ef4444; border:1px solid #ef4444; padding:2px 6px; border-radius:4px; font-size:0.75rem;">🔴 Suspended</span>' : '<span style="background:rgba(16, 185, 129, 0.1); color:#10b981; border:1px solid #10b981; padding:2px 6px; border-radius:4px; font-size:0.75rem;">🟢 Active</span>';
+                const premiumBadge = u.isPremium ? '<span style="background:rgba(245, 158, 11, 0.1); color:#f59e0b; border:1px solid #f59e0b; padding:2px 6px; border-radius:4px; font-size:0.75rem; margin-left:6px;">⭐ Premium</span>' : '';
+
                 tr.innerHTML = `
                     <td style="font-weight:600;">${u.name || 'N/A'}</td>
-                    <td style="color:#94a3b8;">${u.email || 'N/A'}</td>
-                    <td style="color:#94a3b8;">${u.phone || 'N/A'}</td>
-                    <td style="font-size:0.85rem; color:#cbd5e1;">${dateObj.toLocaleDateString()}</td>
+                    <td style="color:#94a3b8;"><div style="color:white;">${u.email || 'N/A'}</div><div style="font-size:0.85rem;">${u.phone || 'N/A'}</div></td>
+                    <td style="font-size:0.85rem; color:#cbd5e1;">${statusBadge}${premiumBadge}<div style="margin-top:6px; color:#94a3b8;">${dateObj.toLocaleDateString()}</div></td>
+                    <td>
+                        <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                            <button class="action-btn edit" onclick="toggleUserPremium('${u.id}', ${!u.isPremium})" title="Toggle Premium Status" style="background:#f59e0b; color:white;"><i class="fa-solid fa-star"></i></button>
+                            <button class="action-btn edit" onclick="toggleUserSuspend('${u.id}', ${!u.isSuspended})" title="${u.isSuspended ? 'Reactivate User' : 'Suspend User'}" style="background:${u.isSuspended ? '#10b981' : '#ef4444'}; color:white;"><i class="fa-solid ${u.isSuspended ? 'fa-play' : 'fa-pause'}"></i></button>
+                            <button class="action-btn edit" onclick="resetUserPassword('${u.id}')" title="Reset Password" style="background:#6366f1; color:white;"><i class="fa-solid fa-key"></i></button>
+                            <button class="action-btn delete" onclick="deleteUser('${u.id}')" title="Delete User"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </td>
                 `;
                 tbody.appendChild(tr);
             });
+        }
+
+        async function resetUserPassword(id) {
+            const newPass = prompt("Enter the new password for this user:");
+            if (!newPass || newPass.trim() === "") return;
+            if (newPass.length < 6) {
+                alert("Password must be at least 6 characters.");
+                return;
+            }
+            
+            try {
+                const msgBuffer = new TextEncoder().encode(newPass);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hashedPass = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                
+                await firebase.firestore().collection("users").doc(id).update({ password: hashedPass });
+                alert("Password successfully reset and securely hashed!");
+            } catch(e) {
+                alert("Error resetting password: " + e.message);
+            }
+        }
+
+        function toggleUserPremium(id, isPremium) {
+            firebase.firestore().collection("users").doc(id).update({ isPremium: isPremium }).catch(e => alert(e.message));
+        }
+
+        function toggleUserSuspend(id, isSuspended) {
+            firebase.firestore().collection("users").doc(id).update({ isSuspended: isSuspended }).catch(e => alert(e.message));
+        }
+
+        function deleteUser(id) {
+            if (confirm("WARNING: Are you sure you want to permanently delete this user account?\n\nThis will NOT delete their previous orders or data to protect store history, but they will lose all access.")) {
+                firebase.firestore().collection("users").doc(id).delete().catch(e => alert(e.message));
+            }
         }
 
         function deleteOrder(id) {
@@ -364,11 +470,11 @@
                     <td style="font-size:0.85rem; color:#cbd5e1;">${itemsList}</td>
                     <td style="font-weight:bold; color:var(--accent-cyan);">$${parseFloat(o.totalAmount).toFixed(2)}</td>
                     <td>
-                        <span style="background:rgba(255,255,255,0.05); border:1px solid ${statusColor}; color:${statusColor}; padding:4px 10px; border-radius:99px; font-size:0.8rem; font-weight:600;">${o.status}</span>
+                        <span style="background:rgba(255, 255, 255, 0.05); border:1px solid ${statusColor}; color:${statusColor}; padding:4px 10px; border-radius:99px; font-size:0.8rem; font-weight:600;">${o.status}</span>
                     </td>
                     <td>
                         <div style="display:flex; gap:8px;">
-                          <select onchange="updateOrderStatus('${o.id}', this.value)" style="background:#1e293b; color:white; border:1px solid rgba(255,255,255,0.1); padding:6px; border-radius:6px; outline:none; cursor:pointer; flex:1;">
+                          <select onchange="updateOrderStatus('${o.id}', this.value)" style="background:#1e293b; color: white; border:1px solid rgba(255, 255, 255, 0.1); padding:6px; border-radius:6px; outline:none; cursor:pointer; flex:1;">
                             <option value="Pending" ${o.status === 'Pending' ? 'selected' : ''}>Pending</option>
                             <option value="Shipped" ${o.status === 'Shipped' ? 'selected' : ''}>Shipped</option>
                             <option value="Delivered" ${o.status === 'Delivered' ? 'selected' : ''}>Delivered</option>
@@ -636,7 +742,7 @@
             }
             ads.forEach(a => {
                 const card = document.createElement("div");
-                card.style.cssText = "background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:6px;";
+                card.style.cssText = "background:rgba(255,255,255,0.04); border:1px solid rgba(255, 255, 255, 0.1); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:6px;";
                 const tag = document.createElement("div");
                 tag.style.cssText = "color:#38bdf8; font-weight:700; font-size:0.8rem;";
                 tag.innerText = a.tag || "";
@@ -791,7 +897,7 @@
             }
             banners.forEach(b => {
                 const card = document.createElement("div");
-                card.style.cssText = "background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden;";
+                card.style.cssText = "background:rgba(255,255,255,0.04); border:1px solid rgba(255, 255, 255, 0.1); border-radius:12px; overflow:hidden;";
 
                 const img = document.createElement("img");
                 img.src = /^data:image\//.test(b.image || "") || /^https?:\/\//.test(b.image || "") ? b.image : "";

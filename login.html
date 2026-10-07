@@ -20,6 +20,8 @@
 
     <style>
         :root {
+        --input-bg: #080c14;
+        --table-header: #1e293b;
             --bg-dark: #070a12;
             --glass-bg: rgba(18, 25, 41, 0.62);
             --glass-border: rgba(255, 255, 255, 0.12);
@@ -42,8 +44,8 @@
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
+            background-color: #070a13;
+            color: white;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -82,7 +84,7 @@
             width: 100%;
             max-width: 440px;
             background: linear-gradient(160deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.015) 40%), var(--glass-bg);
-            border: 1px solid var(--glass-border);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 28px;
             padding: 38px 32px 34px;
             backdrop-filter: blur(28px) saturate(150%);
@@ -137,7 +139,7 @@
         .brand-logo {
             font-size: 1.7rem;
             font-weight: 900;
-            color: var(--text-main);
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -161,7 +163,7 @@
         .tab-switcher {
             display: flex;
             background: rgba(6, 9, 17, 0.6);
-            border: 1px solid var(--glass-border);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 4px;
             border-radius: 99px;
             margin-bottom: 26px;
@@ -181,11 +183,11 @@
             transition: all 0.3s ease;
         }
 
-        .tab-btn:hover:not(.active) { color: var(--text-main); }
+        .tab-btn:hover:not(.active) { color: white; }
 
         .tab-btn.active {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
-            color: #ffffff;
+            color: white;
             border: 1px solid rgba(255, 255, 255, 0.22);
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
         }
@@ -203,8 +205,8 @@
         .input-wrapper { position: relative; }
         .input-wrapper input {
             width: 100%;
-            background: var(--input-bg);
-            border: 1px solid var(--glass-border);
+            background: #080c14;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 13px 16px;
             border-radius: 14px;
             color: white;
@@ -226,9 +228,9 @@
         /* Keep browser autofill from turning inputs white */
         .input-wrapper input:-webkit-autofill,
         .input-wrapper input:-webkit-autofill:focus {
-            -webkit-text-fill-color: #ffffff;
+            -webkit-text-fill-color: white;
             -webkit-box-shadow: 0 0 0 1000px #0b1120 inset;
-            caret-color: #ffffff;
+            caret-color: white;
             transition: background-color 9999s ease-in-out 0s;
         }
 
@@ -297,8 +299,8 @@
             text-align: center;
             font-size: 1.6rem; font-weight: 800;
             border-radius: 16px;
-            background: var(--input-bg);
-            border: 1px solid var(--glass-border);
+            background: #080c14;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--accent-cyan);
             outline: none;
             caret-color: var(--accent-cyan);
@@ -326,7 +328,7 @@
         .resend-timer span { color: var(--accent-cyan); font-weight: 700; cursor: pointer; transition: opacity 0.2s ease; }
         .resend-timer span:hover { opacity: 0.8; }
         .resend-timer .cancel-link { display: inline-block; margin-top: 8px; color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; font-weight: 400; }
-        .resend-timer .cancel-link:hover { color: var(--text-main); opacity: 1; }
+        .resend-timer .cancel-link:hover { color: white; opacity: 1; }
 
         @media (max-width: 480px) {
             .auth-container { padding: 30px 20px 26px; border-radius: 24px; }
@@ -605,8 +607,6 @@
                 return;
             }
 
-            // Try to find the user by email, name, or phone
-            // Firestore doesn't support OR queries across fields, so we run up to 3 queries
             const usersRef = db.collection("users");
             const queries = [
                 usersRef.where("email", "==", loginIdLower).get(),
@@ -615,15 +615,20 @@
             ];
 
             Promise.all(queries.map(function(q) { return q.catch(function() { return { empty: true, docs: [] }; }); }))
-                .then(function(results) {
-                    // Merge all results and find any document that matches the password
+                .then(async function(results) {
                     let foundUser = null;
                     let foundDocId = null;
+
+                    const encoder = new TextEncoder();
+                    const hashBuffer = await crypto.subtle.digest('SHA-256', encoder.encode(pass));
+                    const hashArray = Array.from(new Uint8Array(hashBuffer));
+                    const hashedPass = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
                     for (let i = 0; i < results.length; i++) {
                         if (!results[i].empty) {
                             results[i].docs.forEach(function(doc) {
                                 const data = doc.data();
-                                if (data.password === pass) {
+                                if (data.password === pass || data.password === hashedPass) {
                                     foundUser = data;
                                     foundDocId = doc.id;
                                 }
@@ -632,7 +637,15 @@
                     }
 
                     if (foundUser) {
-                        localStorage.setItem('arduino_hub_current_user', JSON.stringify({ email: foundUser.email, name: foundUser.name || 'User', uid: foundDocId }));
+                        if (foundUser.isSuspended) {
+                            showMessage("Your account has been suspended by the administrator.", "error");
+                            btn.disabled = false;
+                            btn.innerHTML = "Sign In";
+                            return;
+                        }
+
+                        localStorage.setItem('arduino_hub_current_user', JSON.stringify({ email: foundUser.email, name: foundUser.name || 'User', uid: foundDocId, isPremium: foundUser.isPremium || false }));
+                        
                         showMessage("Signed in successfully! Redirecting...", "success");
                         setTimeout(function() { window.location.href = "index.html"; }, 800);
                     } else {
