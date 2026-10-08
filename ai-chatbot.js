@@ -270,8 +270,8 @@
 
 /* Total & buy button */
 .aicb-total{display:flex;justify-content:space-between;align-items:center;padding:8px 4px;margin-top:8px;border-top:1px solid rgba(255,255,255,.08);font-size:.9rem}
-.aicb-total span{color:#94a3b8;font-weight:600}
-.aicb-total b{color:#f8fafc;font-size:1.1rem}
+.aicb-total span{color:#2563eb;font-weight:600}
+.aicb-total b{color:#2563eb;font-size:1.1rem}
 .aicb-buy{width:100%;padding:10px;margin-top:8px;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border:none;border-radius:12px;font-size:.88rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.25s}
 .aicb-buy:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 8px 20px rgba(37,99,235,.4)}
 .aicb-buy:disabled{opacity:.6;cursor:not-allowed}
@@ -582,5 +582,6 @@
         init();
     }
 })();
+
 
 
