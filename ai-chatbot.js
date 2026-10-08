@@ -118,6 +118,8 @@
             "You are the friendly project assistant chatbot of 'Arduino Hub', an electronics store. " +
             "The user describes an electronics / Arduino / ESP32 / robotics project idea. " +
             "Work out every component needed.\n\n" +
+            "AVAILABLE STORE PRODUCTS (Use ONLY these exact names if recommending a product from our store. If a required component is not in this list, it is UNAVAILABLE):\n" +
+            (catalog.map(function(p){ return "- " + (p.title || "Unknown"); }).join("\n")) + "\n\n" +
             "RULES:\n" +
             "- Reply with ONE valid JSON object only, no markdown, no extra text.\n" +
             "- Write all human-readable text in the SAME language as the user (Arabic or English). JSON keys stay English.\n" +

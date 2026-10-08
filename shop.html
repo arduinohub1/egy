@@ -19,6 +19,8 @@
     <style>
         /* === GLOBAL STYLES & VARIABLES === */
         :root {
+        --input-bg: #080c14;
+        --table-header: #1e293b;
             --bg-dark: #070a13;
             --bg-card: #0f172a;
             --card-border: rgba(255, 255, 255, 0.08);
@@ -45,8 +47,8 @@
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
+            background-color: #070a13;
+            color: white;
             min-height: 100vh;
             overflow-x: hidden;
             line-height: 1.5;
@@ -66,7 +68,7 @@
             background: rgba(7, 10, 19, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--card-border);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             padding: 16px 5%;
             display: flex;
             align-items: center;
@@ -79,7 +81,7 @@
             font-size: 1.5rem;
             font-weight: 900;
             letter-spacing: 1.5px;
-            color: var(--text-main);
+            color: white;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -106,7 +108,7 @@
         }
 
         nav.nav-menu ul li a:hover, nav.nav-menu ul li a.active {
-            color: var(--text-main);
+            color: white;
         }
 
         .nav-actions {
@@ -122,8 +124,8 @@
         
         .search-container input {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--card-border);
-            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: white;
             padding: 9px 16px 9px 36px;
             border-radius: 99px;
             outline: none;
@@ -149,8 +151,8 @@
 
         .icon-btn {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--card-border);
-            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: white;
             width: 42px;
             height: 42px;
             border-radius: 50%;
@@ -184,13 +186,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid var(--bg-dark);
+            border: 2px solid #070a13;
         }
 
         .glass-btn {
             background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
             padding: 10px 20px;
             border-radius: 99px;
             font-weight: 600;
@@ -215,7 +217,7 @@
             align-items: center;
             gap: 10px;
             background: rgba(255, 255, 255, 0.06);
-            border: 1px solid var(--glass-border);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 6px 14px;
             border-radius: 99px;
         }
@@ -315,8 +317,8 @@
 
         .btn-secondary {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--card-border);
-            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: white;
             padding: 14px 28px;
             border-radius: var(--radius-md);
             font-size: 1rem;
@@ -381,7 +383,7 @@
             background: rgba(15, 23, 42, 0.65);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 4px;
             border-radius: 99px;
             box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 10px 25px rgba(0,0,0,0.4);
@@ -417,7 +419,7 @@
         }
 
         .ios-tab.active {
-            color: #ffffff;
+            color: white;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
         }
 
@@ -447,8 +449,8 @@
         }
 
         .category-card {
-            background: var(--bg-card);
-            border: 1px solid var(--card-border);
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: var(--radius-lg);
             padding: 24px 16px;
             text-align: center;
@@ -484,8 +486,8 @@
 
         .product-card {
             position: relative;
-            background: var(--bg-card);
-            border: 1px solid var(--card-border);
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: var(--radius-lg);
             padding: 20px;
             display: flex;
@@ -562,7 +564,7 @@
             justify-content: space-between;
             margin-top: 12px;
             padding-top: 12px;
-            border-top: 1px solid var(--card-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .price-val {
@@ -596,7 +598,7 @@
 
         .ai-box {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            border: 1px solid var(--glass-border);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--radius-lg);
             padding: 32px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
@@ -625,17 +627,17 @@
             flex: 1;
             min-width: 200px;
             background: #080c14;
-            border: 1px solid var(--card-border);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             padding: 14px 18px;
             border-radius: var(--radius-md);
-            color: var(--text-main);
+            color: white;
             font-size: 0.98rem;
             outline: none;
         }
 
         .ai-result-box {
             background: #080c14;
-            border: 1px solid var(--card-border);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: var(--radius-md);
             padding: 20px;
             display: none;
@@ -671,7 +673,7 @@
 
         .promo-card {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid var(--card-border);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: var(--radius-lg);
             padding: 36px;
             display: flex;
@@ -684,7 +686,7 @@
         .trust-bar {
             padding: 40px 5%;
             background: rgba(15, 23, 42, 0.4);
-            border-y: 1px solid var(--card-border);
+            border-y: 1px solid rgba(255, 255, 255, 0.05);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 24px;
@@ -703,7 +705,7 @@
         .site-footer {
             background-color: #0d111a;
             padding: 60px 5% 20px;
-            border-top: 1px solid var(--card-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             font-size: 0.9rem;
         }
 
@@ -716,7 +718,7 @@
         }
 
         .footer-col h4 {
-            color: var(--text-main);
+            color: white;
             font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 20px;
@@ -730,7 +732,7 @@
         .brand-col .footer-logo {
             font-size: 1.6rem;
             font-weight: 900;
-            color: var(--text-main);
+            color: white;
             margin-bottom: 6px;
         }
 
@@ -777,7 +779,7 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 20px;
-            border-top: 1px solid var(--card-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             color: var(--text-muted);
             font-size: 0.82rem;
             max-width: 1350px;
@@ -803,7 +805,7 @@
 
         .glass-modal {
             background: #0d1322;
-            border: 1px solid var(--glass-border);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             width: 100%;
             max-width: 450px;
@@ -831,7 +833,7 @@
             max-width: 400px;
             height: 100%;
             background: #090e1a;
-            border-left: 1px solid var(--glass-border);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 2200;
             padding: 24px;
             display: flex;
@@ -959,7 +961,7 @@
         /* RATING MODAL STYLES */
         .rating-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px;}
         .rating-modal-overlay.open { display: flex; }
-        .rating-modal-box { background: #0f172a; padding: 30px; border-radius: 20px; width: 100%; max-width: 400px; border: 1px solid rgba(255,255,255,0.1); text-align: center;}
+        .rating-modal-box { background: #0f172a; padding: 30px; border-radius: 20px; width: 100%; max-width: 400px; border: 1px solid rgba(255, 255, 255, 0.1); text-align: center;}
         .star-rating-select { display: flex; justify-content: center; gap: 10px; margin: 20px 0; flex-direction: row-reverse; }
         .star-rating-select input { display: none; }
         .star-rating-select label { font-size: 2rem; color: #334155; cursor: pointer; transition: 0.2s; }
@@ -970,10 +972,11 @@
         
 
         .page-header { padding: 40px 5% 20px; text-align: center; max-width: 1350px; margin: 0 auto; }
-        .page-header h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; color: var(--text-main); }
+        .page-header h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; color: white; }
         .page-header p { color: var(--text-muted); font-size: 1.1rem; }
 </style>
 <link rel="stylesheet" href="store-ui.css">
+    <link rel="stylesheet" href="theme-light.css">
 </head>
 <body id="top">
 
@@ -1094,7 +1097,7 @@
 
 
     <!-- MINIMAL FOOTER -->
-    <footer style="text-align: center; padding: 20px; border-top: 1px solid var(--card-border); margin-top: 40px; background-color: #0d111a;">
+    <footer style="text-align: center; padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 40px; background-color: #0d111a;">
         <div class="social-icons-wrapper" style="display: flex; justify-content: center; gap: 15px;">
             <!-- ADMIN: INSERT INSTAGRAM LINK BELOW IN href="YOUR_INSTAGRAM_URL" -->
             <a href="YOUR_INSTAGRAM_URL" target="_blank" style="width: 36px; height: 36px; background: black; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none; transition: 0.3s;"><i class="fa-brands fa-instagram"></i></a>
@@ -1112,7 +1115,7 @@
             <button onclick="toggleCart(false)" style="background:none; border:none; color:white; cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="cart-items" id="cartItemsContainer"></div>
-        <div style="border-top:1px solid var(--card-border); padding-top:16px;">
+        <div style="border-top:1px solid rgba(255, 255, 255, 0.05); padding-top:16px;">
             <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.1rem; margin-bottom:16px;">
                 <span>Total Amount:</span>
                 <span id="cartTotalPrice" style="color:var(--accent-cyan);">$0.00</span>
