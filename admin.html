@@ -478,14 +478,18 @@
         }
 
         
-        db.collection("settings").doc("shipping").onSnapshot(doc => {
-            if (doc.exists) {
-                const data = doc.data();
-                if(document.getElementById("shipRuleAmountOn")) document.getElementById("shipRuleAmountOn").checked = data.ruleAmountOn || false;
-                if(document.getElementById("shipRuleAmountVal")) document.getElementById("shipRuleAmountVal").value = data.ruleAmountVal !== undefined ? data.ruleAmountVal : 1000;
-                if(document.getElementById("shipRulePremiumOn")) document.getElementById("shipRulePremiumOn").checked = data.rulePremiumOn || false;
-                if(document.getElementById("shipRuleCountOn")) document.getElementById("shipRuleCountOn").checked = data.ruleCountOn || false;
-                if(document.getElementById("shipRuleCountVal")) document.getElementById("shipRuleCountVal").value = data.ruleCountVal !== undefined ? data.ruleCountVal : 10;
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof firebase !== 'undefined') {
+                firebase.firestore().collection("settings").doc("shipping").onSnapshot(doc => {
+                    if (doc.exists) {
+                        const data = doc.data();
+                        if(document.getElementById("shipRuleAmountOn")) document.getElementById("shipRuleAmountOn").checked = data.ruleAmountOn || false;
+                        if(document.getElementById("shipRuleAmountVal")) document.getElementById("shipRuleAmountVal").value = data.ruleAmountVal !== undefined ? data.ruleAmountVal : 1000;
+                        if(document.getElementById("shipRulePremiumOn")) document.getElementById("shipRulePremiumOn").checked = data.rulePremiumOn || false;
+                        if(document.getElementById("shipRuleCountOn")) document.getElementById("shipRuleCountOn").checked = data.ruleCountOn || false;
+                        if(document.getElementById("shipRuleCountVal")) document.getElementById("shipRuleCountVal").value = data.ruleCountVal !== undefined ? data.ruleCountVal : 10;
+                    }
+                });
             }
         });
 
