@@ -877,11 +877,15 @@
             header.header {
                 flex-direction: column;
                 align-items: stretch;
-                padding: 16px 5%;
+                padding: 10px 5%;
             }
             .brand-logo { 
-                justify-content: center; 
-                margin-bottom: 12px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 0;
+                top: 14px;
+                z-index: 10;
             }
             .nav-actions {
                 width: 100%;
@@ -943,7 +947,7 @@
         .mobile-icons-group { display: flex; align-items: center; gap: 12px; }
         
         @media (max-width: 576px) {
-            .nav-icons-row { flex-direction: column; width: 100%; gap: 16px; }
+            .nav-icons-row { flex-direction: column; width: 100%; gap: 12px; }
             .mobile-icons-group { 
                 width: 100%; 
                 display: flex;
@@ -1031,10 +1035,10 @@
                 <button class="ios-tab active" onclick="switchCategory('All', this)">All Products</button>
                 <button class="ios-tab" onclick="switchCategory('Microcontrollers', this)">Microcontrollers</button>
                 <button class="ios-tab" onclick="switchCategory('Sensors', this)">Sensors</button>
-                <button class="ios-tab" onclick="switchCategory('Motors', this)">Motors & DC</button>
-                <button class="ios-tab" onclick="switchCategory('Power', this)">Power Supplies</button>
+                <button class="ios-tab" onclick="switchCategory('Motors', this)">Motors</button>
+                <button class="ios-tab" onclick="switchCategory('Power', this)">Power</button>
                 <button class="ios-tab" onclick="switchCategory('Displays', this)">Displays</button>
-                <button class="ios-tab" onclick="switchCategory('Wires', this)">Wires & Cables</button>
+                <button class="ios-tab" onclick="switchCategory('Wires', this)">Wires</button>
                 <button class="ios-tab" onclick="switchCategory('Modules', this)">Modules</button>
                 <button class="ios-tab" onclick="switchCategory('Components', this)">Components</button>
                 <button class="ios-tab" onclick="switchCategory('Tools', this)">Tools</button>
@@ -1057,7 +1061,7 @@
         </div>
         <div class="category-card" onclick="switchCategory('Motors')">
             <i class="fa-solid fa-gear" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Motors & DC</h4>
+            <h4>Motors</h4>
         </div>
         <div class="category-card" onclick="switchCategory('Power')">
             <i class="fa-solid fa-battery-full" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
@@ -1166,5 +1170,9 @@
     </script>
 </body>
 </html>
+
+
+
+
 
 
