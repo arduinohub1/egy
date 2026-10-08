@@ -857,11 +857,15 @@
             header.header {
                 flex-direction: column;
                 align-items: stretch;
-                padding: 16px 5%;
+                padding: 10px 5%;
             }
             .brand-logo { 
-                justify-content: center; 
-                margin-bottom: 12px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 0;
+                top: 14px;
+                z-index: 10;
             }
             .nav-actions {
                 width: 100%;
@@ -925,7 +929,7 @@
         .mobile-icons-group { display: flex; align-items: center; gap: 12px; }
         
         @media (max-width: 576px) {
-            .nav-icons-row { flex-direction: column; width: 100%; gap: 16px; }
+            .nav-icons-row { flex-direction: column; width: 100%; gap: 12px; }
             .mobile-icons-group { 
                 width: 100%; 
                 justify-content: space-between; /* Perfect Symmetry */
@@ -1198,6 +1202,7 @@
     <script src="ai-chatbot.js"></script>
 </body>
 </html>
+
 
 
 
