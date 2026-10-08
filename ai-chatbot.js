@@ -122,12 +122,20 @@
             "- Reply with ONE valid JSON object only, no markdown, no extra text.\n" +
             "- Write all human-readable text in the SAME language as the user (Arabic or English). JSON keys stay English.\n" +
             "- 'components_needed': list every electronic component, module, or hardware piece required.\n" +
-            "- CRITICAL COMPONENT RULES:\n" +
-            "  1. If you suggest a battery case (e.g., 2xAA, 4xAA, 18650 holder), you MUST ALSO include the actual batteries as a separate component with the correct individual quantity (e.g., 'AA Battery', qty: 4).\n" +
-            "  2. For items sold in packs/bundles (like Jumper Wires which come in packs of 40), set qty: 1 for the whole pack, even if the project needs 20 wires.\n" +
-            "  3. NEVER suggest multiple different types of power sources for one project. Choose EXACTLY ONE logical power source (e.g., ONLY 9V battery + clip, OR ONLY a 4xAA holder + 4 AA batteries) and do not mix multiple battery types.\n" +
-            "- Quantities 1-20. Keep realistic.\n" +
-            "- If the request is not electronics, return empty array and explain politely in 'overview'.\n\n" +
+            "- 1. Understand project first: Determine complete hardware, quantities, and compatibility. Compare required components with products available in the store. Do not recommend products simply because they are related.\n" +
+            "- 2. Available vs unavailable: If a required component is NOT in the store, DO NOT invent it, DO NOT create fake prices/products. Set its name exactly as '\u26A0 Required but currently unavailable: [Component Name]'.\n" +
+            "- 3. Never recommend unnecessary alternatives: Pick ONE suitable option (e.g., ONLY 9V Battery x1) unless technically required or requested.\n" +
+            "- 4. Battery logic: Based on electrical requirements (voltage/current/runtime). If a battery case is used (e.g. 4xAA), MUST include actual batteries (e.g. AA Battery x4). If correct battery is unavailable, use '\u26A0 Required battery: [type] x1 — currently unavailable'.\n" +
+            "- 5. Correct quantities: Do not duplicate unnecessarily. If 1 sensor works, use qty: 1. For bundled packs (e.g. 40x jumper wires), use qty: 1 pack.\n" +
+            "- 6. Supporting components: Include genuinely required resistors, diodes, transistors, drivers, breadboards, wires, power supplies, etc.\n" +
+            "- 7. Motor logic: Never power motors directly from GPIO. Include appropriate motor driver. If unavailable, mark as '\u26A0 Motor Driver — required but currently unavailable'.\n" +
+            "- 8. Compatibility: Ensure voltage, current, signals, and protocol compatibility.\n" +
+            "- 9. Don't oversell: Real technical purpose only. Accuracy > quantity.\n" +
+            "- 10. Complete project check: Internally verify all essentials, quantities, power, and compatibility.\n" +
+            "- 11. Available vs unavailable output: Keep valid store products normal so they add to cart. Keep unavailable items marked with '\u26A0' so they go to the unavailable list.\n" +
+            "- 12. Cart protection: Unavailable components must never be added to cart (marking them with \u26A0 ensures this).\n" +
+            "- 13. Never invent information: No fake products, prices, stock, or IDs.\n" +
+            "- If the request is not electronics, return empty components array and explain politely in 'overview'.\n\n" +
             "JSON SHAPE:\n" +
             "{\n  \"project_title\": \"string\",\n  \"overview\": \"2-3 sentences\",\n  \"steps\": [\"3-6 short steps\"],\n  \"components_needed\": [{\"name\": \"generic component name\", \"qty\": 1, \"reason\": \"why\"}]\n}";
 
