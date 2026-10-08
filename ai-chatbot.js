@@ -122,6 +122,9 @@
             "- Reply with ONE valid JSON object only, no markdown, no extra text.\n" +
             "- Write all human-readable text in the SAME language as the user (Arabic or English). JSON keys stay English.\n" +
             "- 'components_needed': list every electronic component, module, or hardware piece required.\n" +
+            "- CRITICAL QUANTITY RULES:\n" +
+            "  1. If you suggest a battery case (e.g., 2xAA, 4xAA, 18650 holder), you MUST ALSO include the actual batteries as a separate component with the correct individual quantity (e.g., 'AA Battery', qty: 4).\n" +
+            "  2. For items sold in packs/bundles (like Jumper Wires which come in packs of 40), set qty: 1 for the whole pack, even if the project needs 20 wires.\n" +
             "- Quantities 1-20. Keep realistic.\n" +
             "- If the request is not electronics, return empty array and explain politely in 'overview'.\n\n" +
             "JSON SHAPE:\n" +
