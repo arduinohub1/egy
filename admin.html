@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -58,6 +58,7 @@
         .promo-input-group label { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;}
         .promo-input-group input { width: 100%; background: #080c14; border: 1px solid rgba(255, 255, 255, 0.1); padding: 10px; border-radius: 8px; color: white; box-sizing: border-box;}
     </style>
+    <link rel="stylesheet" href="arduino-hub-ui.css?v=3">
 
     <!-- Firebase Compat SDKs -->
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
@@ -65,7 +66,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
     <script src="firebase-config.js"></script>
 </head>
-<body>
+<body class="admin-page">
     <header>
         <h2 style="margin:0;"><i class="fa-solid fa-microchip" style="color:#38bdf8;"></i> ArduinoHub <span style="font-weight:300;">| Admin</span></h2>
         <div style="display:flex; align-items:center; gap: 15px;">
@@ -288,10 +289,10 @@
             <select id="pcategory">
                 <option value="Microcontrollers">Microcontrollers</option>
                 <option value="Sensors">Sensors</option>
-                <option value="Motors">Motors & DC</option>
-                <option value="Power">Power Supplies</option>
+                <option value="Motors">Motors</option>
+                <option value="Power">Power</option>
                 <option value="Displays">Displays</option>
-                <option value="Wires">Wires & Cables</option>
+                <option value="Wires">Wires</option>
                 <option value="Modules">Modules</option>
                 <option value="Components">Components</option>
                 <option value="Tools">Tools</option>
@@ -422,8 +423,8 @@
                 const dateObj = u.createdAt && u.createdAt.toDate ? u.createdAt.toDate() : new Date();
                 const tr = document.createElement("tr");
                 
-                const statusBadge = u.isSuspended ? '<span style="background:rgba(239, 68, 68, 0.1); color:#ef4444; border:1px solid #ef4444; padding:2px 6px; border-radius:4px; font-size:0.75rem;">🔴 Suspended</span>' : '<span style="background:rgba(16, 185, 129, 0.1); color:#10b981; border:1px solid #10b981; padding:2px 6px; border-radius:4px; font-size:0.75rem;">🟢 Active</span>';
-                const premiumBadge = u.isPremium ? '<span style="background:rgba(245, 158, 11, 0.1); color:#f59e0b; border:1px solid #f59e0b; padding:2px 6px; border-radius:4px; font-size:0.75rem; margin-left:6px;">⭐ Premium</span>' : '';
+                const statusBadge = u.isSuspended ? '<span style="background:rgba(239, 68, 68, 0.1); color:#ef4444; border:1px solid #ef4444; padding:2px 6px; border-radius:4px; font-size:0.75rem;">ðŸ”´ Suspended</span>' : '<span style="background:rgba(16, 185, 129, 0.1); color:#10b981; border:1px solid #10b981; padding:2px 6px; border-radius:4px; font-size:0.75rem;">ðŸŸ¢ Active</span>';
+                const premiumBadge = u.isPremium ? '<span style="background:rgba(245, 158, 11, 0.1); color:#f59e0b; border:1px solid #f59e0b; padding:2px 6px; border-radius:4px; font-size:0.75rem; margin-left:6px;">â­ Premium</span>' : '';
 
                 tr.innerHTML = `
                     <td style="font-weight:600;">${u.name || 'N/A'}</td>
@@ -1019,5 +1020,9 @@
 
 </body>
 </html>
+
+
+
+
 
 

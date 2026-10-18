@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -340,8 +340,12 @@
         }
     </style>
     <link rel="stylesheet" href="theme-light.css">
+    <link rel="stylesheet" href="storefront-redesign.css">
+    <link rel="stylesheet" href="site-navigation.css?v=5">
+    <link rel="stylesheet" href="arduino-hub-ui.css?v=3">
+    <link rel="stylesheet" href="site-design-system.css?v=4">
 </head>
-<body>
+<body class="login-page">
 
     <div class="auth-container">
         <a href="index.html" class="back-btn">
@@ -349,9 +353,9 @@
         </a>
 
         <div class="auth-header">
+            <button class="site-menu-trigger" type="button" data-site-menu-open aria-label="Open menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
             <a href="index.html" class="brand-logo">
-                <i class="fa-solid fa-microchip"></i>
-                <span>Arduino Hub</span>
+                <img class="brand-logo__image" src="assets/arduino-hub-logo.png" alt="Arduino Hub">
             </a>
             <p class="auth-subtitle" id="formHeaderSubtitle">Sign in or create an account to start shopping</p>
         </div>
@@ -374,7 +378,7 @@
             <div class="form-group">
                 <label>Password</label>
                 <div class="input-wrapper">
-                    <input type="password" id="signInPass" required placeholder="••••••••">
+                    <input type="password" id="signInPass" required placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
                     <i class="fa-regular fa-eye toggle-password" onclick="togglePassVisibility('signInPass', this)"></i>
                 </div>
             </div>
@@ -405,7 +409,7 @@
             <div class="form-group">
                 <label>Password</label>
                 <div class="input-wrapper">
-                    <input type="password" id="signUpPass" minlength="6" required placeholder="••••••••">
+                    <input type="password" id="signUpPass" minlength="6" required placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
                     <i class="fa-regular fa-eye toggle-password" onclick="togglePassVisibility('signUpPass', this)"></i>
                 </div>
             </div>
@@ -433,6 +437,8 @@
             </div>
         </form>
     </div>
+
+
 
     
     <script>
@@ -947,5 +953,7 @@
                 .then(function() { resendBusy = false; });
         }
     </script>
+    <script src="ai-chatbot.js?v=23"></script>
+    <script src="site-navigation.js?v=4"></script>
 </body>
 </html>

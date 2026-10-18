@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arduino Hub | Next-Gen Technology & Electronics Store</title>
+    <title>Arduino Hub | Electronics & Components Store</title>
 
     <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -864,15 +864,11 @@
         .toast.show { transform: translateY(0); opacity: 1; }
 
         /* Responsive Breakpoints */
-        .mobile-home-btn-topLeft { display: none; }
         @media (max-width: 992px) {
             .footer-columns-container { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 576px) {
-            .mobile-home-btn-topLeft {
-                display: flex !important;
-            }
             .mobile-home-btn { display: flex !important; margin-right: 4px; }
             header.header {
                 flex-direction: column;
@@ -981,14 +977,19 @@
 </style>
 <link rel="stylesheet" href="store-ui.css">
     <link rel="stylesheet" href="theme-light.css">
+    <link rel="stylesheet" href="premium-mobile-ui.css">
+<link rel="stylesheet" href="storefront-redesign.css">
+<link rel="stylesheet" href="site-navigation.css?v=5">
+    <link rel="stylesheet" href="arduino-hub-ui.css?v=3">
+    <link rel="stylesheet" href="site-design-system.css?v=4">
 </head>
-<body id="top">
+<body id="top" class="premium-shop">
 
     <!-- HEADER / NAVBAR -->
     <header class="header">
+        <button class="site-menu-trigger" type="button" data-site-menu-open aria-label="Open menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
         <a href="index.html" class="brand-logo">
-            <i class="fa-solid fa-microchip"></i>
-            <span>Arduino Hub</span>
+            <img class="brand-logo__image" src="assets/arduino-hub-logo.png" alt="Arduino Hub">
         </a>
 
         
@@ -999,7 +1000,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html" class="active">Shop</a></li>
                 <li><a href="#categories">Categories</a></li>
-                <li><a href="javascript:void(0)" onclick="if(window._aicbToggle) window._aicbToggle(true); else window.location.href='aiagent.html';">AI Builder</a></li>
             </ul>
         </nav>
 
@@ -1007,16 +1007,21 @@
             <div class="nav-icons-row" id="navIconsRow">
                 <!-- Search Bar -->
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="handleSearch(event)" oninput="handleSearchInput(event)">
+                    <input type="text" id="searchInput" aria-label="Search products" placeholder="Search components, kits, sensors..." onkeyup="handleSearch(event)" oninput="handleSearchInput(event)">
                     <i class="fa-solid fa-magnifying-glass"></i>
+                    <button class="search-clear" type="button" aria-label="Clear search" title="Clear search" onclick="clearProductSearch()"><i class="fa-solid fa-xmark"></i></button>
                 </div>
                 
                 <!-- Icons Row (Mobile Top) -->
                 <div class="mobile-icons-group">
-                    <a href="index.html" class="icon-btn mobile-home-btn-topLeft" title="Home">
-                        <i class="fa-solid fa-house"></i>
-                    </a>
-                    
+                    <div id="authContainer">
+                        <a href="login.html" class="icon-btn" id="navLoginBtn" aria-label="Account" title="Account"><i class="fa-regular fa-user"></i></a>
+                        <div class="user-pill" id="navUserLogged">
+                            <div class="user-avatar" id="userAvatar">U</div>
+                            <span id="displayUserName" class="hide-mobile-text">User</span>
+                            <button class="icon-btn" type="button" onclick="handleLogout()" aria-label="Log out" title="Log out"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                        </div>
+                    </div>
 <button class="icon-btn" onclick="toggleCart(true)" title="View Cart">
                         <i class="fa-solid fa-bag-shopping"></i>
                         <div class="cart-badge" id="cartCount">0</div>
@@ -1026,9 +1031,8 @@
         </div>
     </header>
 
-
     <!-- IPHONE GLASSY CATEGORY SWITCHER -->
-    <section class="ios-switch-section" id="productsSection">
+    <section class="ios-switch-section" id="categoryFilterSection">
         <div class="ios-switch-wrapper">
             <div class="ios-glass-switch" id="categorySwitch">
                 <div class="switch-pill" id="switchPill"></div>
@@ -1050,43 +1054,13 @@
     <div class="section-header" id="categories">
         <h2>Shop by Category</h2>
     </div>
-    <div class="categories-grid">
-        <div class="category-card" onclick="switchCategory('Microcontrollers')">
-            <i class="fa-solid fa-microchip" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Boards</h4>
-        </div>
-        <div class="category-card" onclick="switchCategory('Sensors')">
-            <i class="fa-solid fa-wifi" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Sensors</h4>
-        </div>
-        <div class="category-card" onclick="switchCategory('Motors')">
-            <i class="fa-solid fa-gear" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Motors</h4>
-        </div>
-        <div class="category-card" onclick="switchCategory('Power')">
-            <i class="fa-solid fa-battery-full" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Power</h4>
-        </div>
-        <div class="category-card" onclick="switchCategory('Displays')">
-            <i class="fa-solid fa-tv" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Displays</h4>
-        </div>
-        <div class="category-card" onclick="switchCategory('Wires')">
-            <i class="fa-solid fa-plug" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Wires</h4>
-        </div>
-        <div class="category-card" onclick="switchCategory('Modules')">
-            <i class="fa-solid fa-cubes" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Modules</h4>
-        </div>
-        <div class="category-card" onclick="switchCategory('Components')">
-            <i class="fa-solid fa-bolt" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Components</h4>
-        </div>
-        <div class="category-card" onclick="switchCategory('Tools')">
-            <i class="fa-solid fa-screwdriver-wrench" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 12px;"></i>
-            <h4>Tools</h4>
-        </div>
+    <div class="categories-grid" id="shopCategoryCards" aria-label="Shop by category" data-catalog-categories>
+        <a class="category-card home-category-card" data-category="Microcontrollers" href="shop.html?category=Microcontrollers" onclick="event.preventDefault(); switchCategory('Microcontrollers')"><span class="category-icon-wrap"><svg class="category-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="13" y="13" width="22" height="22" rx="4"/><path d="M18 18h12v12H18zM18 7v6m6-6v6m6-6v6M18 35v6m6-6v6m6-6v6M7 18h6m-6 6h6m-6 6h6m22-12h6m-6 6h6m-6 6h6"/></svg></span><h4>Arduino Boards</h4></a>
+        <a class="category-card home-category-card" data-category="Sensors" href="shop.html?category=Sensors" onclick="event.preventDefault(); switchCategory('Sensors')"><span class="category-icon-wrap"><svg class="category-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="5"/><path d="M24 19a11 11 0 0 0-11 11m11-17A17 17 0 0 0 7 30m17-17a17 17 0 0 1 17 17M24 29l-8 12h16l-8-12Z"/></svg></span><h4>Sensors</h4></a>
+        <a class="category-card home-category-card" data-category="Modules" href="shop.html?category=Modules" onclick="event.preventDefault(); switchCategory('Modules')"><span class="category-icon-wrap"><svg class="category-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m24 7 13 7-13 7-13-7 13-7Z"/><path d="M11 14v15l13 7 13-7V14M24 21v15"/></svg></span><h4>Modules</h4></a>
+        <a class="category-card home-category-card" data-category="Wires" href="shop.html?category=Wires" onclick="event.preventDefault(); switchCategory('Wires')"><span class="category-icon-wrap"><svg class="category-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8v12m16-12v12M12 20h24v3a12 12 0 0 1-12 12v5m0-5A12 12 0 0 1 12 23v-3Z"/></svg></span><h4>Cables &amp; Wires</h4></a>
+        <a class="category-card home-category-card" data-category="Power" href="shop.html?category=Power" onclick="event.preventDefault(); switchCategory('Power')"><span class="category-icon-wrap"><svg class="category-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="13" width="32" height="23" rx="4"/><path d="M40 20h3v9h-3M15 19v11m-5-5h10m8-6v12m-5-6h10"/></svg></span><h4>Power</h4></a>
+        <a class="category-card home-category-card" data-category="Tools" href="shop.html?category=Tools" onclick="event.preventDefault(); switchCategory('Tools')"><span class="category-icon-wrap"><svg class="category-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 9 8 8m-4-11 8 8-6 6-8-8 2-6Zm13 11 13 13a4 4 0 0 1-6 6L21 23m7-8a9 9 0 0 0 12 10l-7 7"/><circle cx="12" cy="36" r="4"/></svg></span><h4>Tools</h4></a>
     </div>
 
     <!-- ALL PRODUCTS -->
@@ -1108,8 +1082,9 @@
             <!-- ADMIN: INSERT TIKTOK LINK BELOW IN href="https://www.tiktok.com/@arduino.hub0?_r=1&_t=ZS-9ANzoJ8ugGi" -->
             <a href="https://www.tiktok.com/@arduino.hub0?_r=1&_t=ZS-9ANzoJ8ugGi" target="_blank" style="width: 36px; height: 36px; background: black; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; text-decoration: none; transition: 0.3s;"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-        <div style="color: var(--text-muted); font-size: 0.82rem; margin-top: 15px;">2026 © Arduino Hub. | All Right reserved</div>
+        <div style="color: var(--text-muted); font-size: 0.82rem; margin-top: 15px;">2026 Â© Arduino Hub. | All Right reserved</div>
     </footer>
+
 
     <!-- CART SLIDE-OVER DRAWER -->
     <div class="cart-overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
@@ -1118,7 +1093,7 @@
             <h3>Your Shopping Cart</h3>
             <button onclick="toggleCart(false)" style="background:none; border:none; color:white; cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="cart-items" id="cartItemsContainer"></div>
+        <div class="cart-items" id="cartItemsContainer"><div class="cart-empty-state"><span class="cart-empty-state__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2l2.4 11.1a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6L22 7H5"/></svg></span><h4>Your cart is empty</h4><p>Explore the shop and add the parts you need for your next project.</p><a class="cart-empty-state__link" href="shop.html#productsSection">Browse products <span aria-hidden="true">â†’</span></a></div></div>
         <div style="border-top:1px solid rgba(255, 255, 255, 0.05); padding-top:16px;">
             <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.1rem; margin-bottom:16px;">
                 <span>Total Amount:</span>
@@ -1156,7 +1131,8 @@
     <script src="products.js"></script>
     <!-- AI Chatbot Widget (floating robot button) -->
     <script src="site-config.js"></script>
-    <script src="ai-chatbot.js"></script>
+    <script src="ai-chatbot.js?v=23"></script>
+    <script src="site-navigation.js?v=4"></script>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="icon-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; display: none; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">

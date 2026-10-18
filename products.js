@@ -6,6 +6,109 @@ let searchQuery = "";
 // Firestore snapshot arrived and threw "ReferenceError: products is not defined".
 let products = [];
 let productsStatus = "loading"; // loading | ready | error
+
+// --- PAGINATION STATE ---
+let lastProductDoc = null;
+let hasMoreProducts = true;
+let isLoadingProducts = false;
+const PAGE_SIZE = 24;
+
+async function loadProductsPage(reset = false) {
+    if (typeof firebase === 'undefined' || !firebase.apps.length) return;
+    const db = firebase.firestore();
+    
+    if (reset) {
+        lastProductDoc = null;
+        hasMoreProducts = true;
+        products = [];
+        grid.innerHTML = ""; // Clear existing
+        if (typeof loadProductsPage === "function" && document.getElementById("searchInput") === document.activeElement) { loadProductsPage(true); } else { renderProducts(); } // Shows loading skeleton
+    }
+    
+    if (!hasMoreProducts || isLoadingProducts) return;
+    
+    isLoadingProducts = true;
+    productsStatus = "loading";
+    
+    try {
+        let query = db.collection("products");
+        
+        // Server-side filtering by category
+        const isShop = window.location.pathname.includes('shop.html');
+        if (!isShop) {
+            query = query.where("isBestSeller", "==", true);
+        } else if (activeCategory && activeCategory !== "All") {
+            query = query.where("category", "==", activeCategory);
+        }
+        
+        query = query.limit(PAGE_SIZE);
+        
+        if (lastProductDoc && !reset) {
+            query = query.startAfter(lastProductDoc);
+        }
+        
+        const snapshot = await query.get();
+        
+        if (snapshot.empty) {
+            hasMoreProducts = false;
+        } else {
+            lastProductDoc = snapshot.docs[snapshot.docs.length - 1];
+            const list = [];
+            snapshot.forEach(doc => list.push({ id: doc.id, ...doc.data() }));
+            
+            // Note: Firebase lacks native full-text search. 
+            // If searchQuery exists, we filter the fetched page in-memory as a fallback.
+            // For true server-side search in Firebase, Algolia or ElasticSearch is required.
+            let pageProducts = list;
+            if (searchQuery && isShop) {
+                const q = searchQuery.toLowerCase();
+                pageProducts = pageProducts.filter(p => p.title.toLowerCase().includes(q) || (p.category || "").toLowerCase().includes(q));
+            }
+            
+            products = [...products, ...pageProducts];
+        }
+        
+        productsStatus = "ready";
+        renderHomeCategoryImages();
+        renderProducts();
+        
+        if (hasMoreProducts && isShop) {
+            appendLoadMoreButton();
+        }
+    } catch (err) {
+        console.error("Error paginating products from DB:", err);
+        productsStatus = "error";
+        renderProducts();
+    } finally {
+        isLoadingProducts = false;
+    }
+}
+
+function appendLoadMoreButton() {
+    const grid = document.getElementById("productsGrid");
+    if (!grid) return;
+    
+    // Remove old button if exists
+    const oldBtn = document.getElementById("loadMoreBtnWrapper");
+    if (oldBtn) oldBtn.remove();
+    
+    const wrapper = document.createElement("div");
+    wrapper.id = "loadMoreBtnWrapper";
+    wrapper.style.cssText = "width: 100%; display: flex; justify-content: center; padding: 30px 0; grid-column: 1 / -1;";
+    
+    const btn = document.createElement("button");
+    btn.className = "btn-secondary";
+    btn.innerText = "Load More Products";
+    btn.onclick = () => {
+        btn.innerText = "Loading...";
+        btn.disabled = true;
+        loadProductsPage();
+    };
+    
+    wrapper.appendChild(btn);
+    grid.appendChild(wrapper);
+}
+
 let banners = [];
 let ads = [];
 
@@ -20,7 +123,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (urlParams.has('search')) {
             searchQuery = urlParams.get('search').toLowerCase();
             const searchInput = document.getElementById('searchInput');
-            if(searchInput) searchInput.value = searchQuery;
+            if(searchInput) {
+                searchInput.value = searchQuery;
+                searchInput.closest('.search-container')?.classList.toggle('has-value', Boolean(searchQuery));
+            }
         }
         if (urlParams.has('category')) {
             const cat = urlParams.get('category');
@@ -30,6 +136,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const localUser = JSON.parse(localStorage.getItem("arduino_hub_current_user"));
     handleUserState(localUser);
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) searchInput.closest(".search-container")?.classList.toggle("has-value", Boolean(searchInput.value.trim()));
     
     // --- FIRESTORE DATABASE SYNC ---
     // The database is the ONLY source of products and banners. There are no
@@ -56,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
             snapshot.forEach(doc => list.push({ id: doc.id, ...doc.data() }));
             products = list;
             productsStatus = "ready";
+            renderHomeCategoryImages();
             renderProducts();
             refreshSearchDropdown();
         }, err => {
@@ -63,6 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error loading products from DB:", err);
             products = [];
             productsStatus = "error";
+            renderHomeCategoryImages();
             renderProducts();
             refreshSearchDropdown();
         });
@@ -363,7 +473,10 @@ function selectSearchResult(title) {
     const input = document.getElementById("searchInput");
     closeSearchDropdown();
     if (window.location.pathname.includes('shop.html')) {
-        if (input) input.value = title;
+        if (input) {
+            input.value = title;
+            input.closest(".search-container")?.classList.toggle("has-value", Boolean(title));
+        }
         searchQuery = title.toLowerCase();
         renderProducts();
         const prodSec = document.getElementById("productsSection");
@@ -384,11 +497,24 @@ function handleSearch(e) {
 }
 
 function handleSearchInput(e) {
+    const value = e.target.value.trim();
+    e.target.closest(".search-container")?.classList.toggle("has-value", Boolean(value));
     if (window.location.pathname.includes('shop.html')) {
-        searchQuery = e.target.value.toLowerCase();
+        searchQuery = value.toLowerCase();
         renderProducts();
     }
     refreshSearchDropdown();
+}
+
+function clearProductSearch() {
+    const input = document.getElementById("searchInput");
+    if (!input) return;
+    input.value = "";
+    input.closest(".search-container")?.classList.remove("has-value");
+    searchQuery = "";
+    closeSearchDropdown();
+    if (window.location.pathname.includes("shop.html")) renderProducts();
+    input.focus();
 }
 
 function setupIosSwitchPill() {
@@ -408,7 +534,7 @@ function switchCategory(cat, btn) {
     
     if(!btn) { 
         const tabs = Array.from(document.querySelectorAll(".ios-tab"));
-        const targetTab = tabs.find(t => t.innerText.includes(cat) || t.innerText === "Wires & Accessories" && cat === "Wires & Modules");
+        const targetTab = tabs.find(t => t.dataset.category === cat || t.innerText.includes(cat) || t.innerText === "Wires & Accessories" && cat === "Wires & Modules");
         if (targetTab) {
             targetTab.classList.add("active");
             if (window.innerWidth > 576) updatePillPosition(targetTab);
@@ -420,7 +546,7 @@ function switchCategory(cat, btn) {
     
     document.querySelectorAll(".category-card").forEach(c => c.classList.remove("active"));
     const cards = Array.from(document.querySelectorAll(".category-card"));
-    const targetCard = cards.find(c => c.getAttribute("onclick") && c.getAttribute("onclick").includes("'" + cat + "'"));
+    const targetCard = cards.find(c => c.dataset.category === cat || c.getAttribute("onclick") && c.getAttribute("onclick").includes("'" + cat + "'"));
     if (targetCard) {
         targetCard.classList.add("active");
     }
@@ -534,12 +660,238 @@ function renderBanners() {
     box.appendChild(slider);
 }
 
+const CATEGORY_PRESENTATION = [
+    { match: /microcontroller|arduino|\bboard\b/i, label: "Arduino Boards", icon: "fa-microchip" },
+    { match: /sensor/i, label: "Sensors", icon: "fa-satellite-dish" },
+    { match: /module/i, label: "Modules", icon: "fa-cubes" },
+    { match: /wire|cable/i, label: "Cables & Wires", icon: "fa-plug" },
+    { match: /power|battery|supply/i, label: "Power", icon: "fa-battery-full" },
+    { match: /motor/i, label: "Motors", icon: "fa-fan" },
+    { match: /display|screen|lcd/i, label: "Displays", icon: "fa-display" },
+    { match: /tool/i, label: "Tools", icon: "fa-screwdriver-wrench" },
+    { match: /component/i, label: "Components", icon: "fa-gears" }
+];
+
+const CATEGORY_ICON_DRAWINGS = Object.freeze({
+    "fa-microchip": '<rect x="13" y="13" width="22" height="22" rx="4"/><path d="M18 18h12v12H18zM18 7v6m6-6v6m6-6v6M18 35v6m6-6v6m6-6v6M7 18h6m-6 6h6m-6 6h6m22-12h6m-6 6h6m-6 6h6"/>',
+    "fa-satellite-dish": '<circle cx="24" cy="24" r="5"/><path d="M24 19a11 11 0 0 0-11 11m11-17A17 17 0 0 0 7 30m17-17a17 17 0 0 1 17 17M24 7a23 23 0 0 1 23 23M24 29l-8 12h16l-8-12Z"/>',
+    "fa-cubes": '<path d="m24 7 13 7-13 7-13-7 13-7Z"/><path d="M11 14v15l13 7 13-7V14M24 21v15"/><path d="m7 29 9 5m25-5-9 5"/>',
+    "fa-plug": '<path d="M16 8v12m16-12v12M12 20h24v3a12 12 0 0 1-12 12v5m0-5A12 12 0 0 1 12 23v-3Z"/><path d="M24 40v2"/>',
+    "fa-battery-full": '<rect x="8" y="13" width="32" height="23" rx="4"/><path d="M40 20h3v9h-3M15 19v11m-5-5h10m8-6v12m-5-6h10"/>',
+    "fa-fan": '<circle cx="24" cy="24" r="4"/><path d="M24 20c-2-11 1-15 6-14 6 1 3 9-2 15m0 3c11-2 15 1 14 6-1 6-9 3-15-2m-3 0c2 11-1 15-6 14-6-1-3-9 2-15m0-3c-11 2-15-1-14-6 1-6 9-3 15 2"/><circle cx="24" cy="24" r="17"/>',
+    "fa-display": '<rect x="7" y="9" width="34" height="25" rx="4"/><path d="M18 41h12m-6-7v7m-12-24h24v13H12z"/>',
+    "fa-screwdriver-wrench": '<path d="m8 9 8 8m-4-11 8 8-6 6-8-8 2-6Zm13 11 13 13a4 4 0 0 1-6 6L21 23m7-8a9 9 0 0 0 12 10l-7 7"/><circle cx="12" cy="36" r="4"/>',
+    "fa-gears": '<circle cx="18" cy="19" r="6"/><circle cx="31" cy="30" r="5"/><path d="M18 9v4m0 12v4m-10-10h4m12 0h4m-17-7 3 3m8 8 3 3m-14 0 3-3m8-8 3-3m10 8v4m0 10v4m-7-9h4m6 0h4m-16-6 3 3m8 8 3 3m-14 0 3-3m8-8 3-3"/>',
+    "fa-cube": '<path d="m24 6 16 9v18l-16 9-16-9V15l16-9Z"/><path d="m8 15 16 9 16-9M24 24v18"/>'
+});
+
+function createCategoryIcon(iconName) {
+    const wrapper = document.createElement("span");
+    wrapper.className = "category-icon-wrap";
+    const drawing = CATEGORY_ICON_DRAWINGS[iconName] || CATEGORY_ICON_DRAWINGS["fa-cube"];
+    wrapper.innerHTML = `<svg class="category-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${drawing}</svg>`;
+    return wrapper;
+}
+
+function getCategoryPresentation(category) {
+    const configured = CATEGORY_PRESENTATION.find(item => item.match.test(category));
+    return configured || { label: category, icon: "fa-cube" };
+}
+
+function renderCategoryCards() {
+    const grids = Array.from(document.querySelectorAll("[data-catalog-categories]"));
+    if (!grids.length || productsStatus !== "ready") return;
+
+    const categoryCounts = new Map();
+    products.filter(isValidProduct).forEach(product => {
+        const category = String(product.category || "").trim();
+        if (category) categoryCounts.set(category, (categoryCounts.get(category) || 0) + 1);
+    });
+    const categories = Array.from(categoryCounts.keys()).sort((a, b) => {
+        const countDiff = categoryCounts.get(b) - categoryCounts.get(a);
+        return countDiff || a.localeCompare(b);
+    });
+    window.dispatchEvent(new CustomEvent("arduino-hub:categories-ready", { detail: { categories } }));
+    const categoryHeader = document.getElementById("categories");
+    if (categoryHeader) categoryHeader.hidden = categories.length === 0;
+
+    grids.forEach(grid => {
+        if (!categories.length) {
+            grid.hidden = true;
+            return;
+        }
+        grid.hidden = false;
+        const fragment = document.createDocumentFragment();
+        categories.forEach(category => {
+            const presentation = getCategoryPresentation(category);
+            const product = products.find(item => item.category === category && safeImageSrc(item.image));
+            const card = document.createElement("a");
+            card.className = "category-card home-category-card";
+            card.dataset.category = category;
+            card.href = "shop.html?category=" + encodeURIComponent(category);
+            if (grid.id === "shopCategoryCards") {
+                card.addEventListener("click", event => {
+                    event.preventDefault();
+                    switchCategory(category);
+                });
+            }
+
+            if (product) {
+                const image = document.createElement("img");
+                image.className = "category-product-image";
+                image.src = safeImageSrc(product.image);
+                image.alt = "";
+                image.loading = "lazy";
+                image.decoding = "async";
+                image.addEventListener("error", () => {
+                    image.replaceWith(createCategoryIcon(presentation.icon));
+                }, { once: true });
+                card.appendChild(image);
+            } else {
+                card.appendChild(createCategoryIcon(presentation.icon));
+            }
+
+            const label = document.createElement("h4");
+            label.textContent = presentation.label;
+            card.appendChild(label);
+            fragment.appendChild(card);
+        });
+        grid.replaceChildren(fragment);
+    });
+
+    renderCategoryTabs(categories);
+}
+
+function renderCategoryTabs(categories) {
+    const switcher = document.getElementById("categorySwitch");
+    if (!switcher || productsStatus !== "ready") return;
+    if (activeCategory !== "All" && !categories.includes(activeCategory)) activeCategory = "All";
+    const pill = switcher.querySelector(".switch-pill");
+    const fragment = document.createDocumentFragment();
+    if (pill) fragment.appendChild(pill);
+
+    const allButton = document.createElement("button");
+    allButton.type = "button";
+    allButton.className = "ios-tab" + (activeCategory === "All" ? " active" : "");
+    allButton.dataset.category = "All";
+    allButton.textContent = "All Products";
+    allButton.addEventListener("click", () => switchCategory("All", allButton));
+    fragment.appendChild(allButton);
+
+    categories.forEach(category => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "ios-tab" + (activeCategory === category ? " active" : "");
+        button.dataset.category = category;
+        button.textContent = getCategoryPresentation(category).label;
+        button.addEventListener("click", () => switchCategory(category, button));
+        fragment.appendChild(button);
+    });
+
+    switcher.replaceChildren(fragment);
+    if (typeof setupIosSwitchPill === "function") setupIosSwitchPill();
+}
+
+function getProductTimestamp(product) {
+    const value = product.createdAt || product.created_at || product.createdOn || product.dateAdded;
+    if (!value) return 0;
+    if (typeof value.toMillis === "function") return value.toMillis();
+    if (typeof value.toDate === "function") return value.toDate().getTime();
+    if (value instanceof Date) return value.getTime();
+    if (typeof value === "number") return value < 1e12 ? value * 1000 : value;
+    const parsed = Date.parse(value);
+    return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function renderNewArrivals() {
+    const section = document.getElementById("newArrivalsSection");
+    const grid = document.getElementById("newArrivalsGrid");
+    if (!section || !grid || productsStatus === "loading") return;
+
+    const recentCutoff = Date.now() - 90 * 24 * 60 * 60 * 1000;
+    const arrivals = products.filter(product => {
+        const added = getProductTimestamp(product);
+        return isValidProduct(product) && (product.isNewArrival === true || added >= recentCutoff && added <= Date.now());
+    }).sort((a, b) => getProductTimestamp(b) - getProductTimestamp(a)).slice(0, 8);
+
+    if (!arrivals.length) {
+        section.hidden = false;
+        grid.hidden = false;
+        renderProductsState(grid, "fa-box-open", "New arrivals will appear here when newly added products are available.");
+        return;
+    }
+    section.hidden = false;
+    grid.hidden = false;
+    const fragment = document.createDocumentFragment();
+    arrivals.forEach(product => fragment.appendChild(createProductCard(product)));
+    grid.replaceChildren(fragment);
+}
+
+// Category products are drawn from the live catalog; icons fill in only when
+// the catalog has no suitable image for that category.
+function renderHomeCategoryImages() {
+    if (!(document.body.classList.contains("premium-home") || document.body.classList.contains("premium-shop")) || !Array.isArray(products)) return;
+    renderCategoryCards();
+}
+
 /* ============================================================
    PRODUCT CARD - fixed size, built only from database fields
    (layout/size is defined in store-ui.css)
    ============================================================ */
 function isValidProduct(p) {
     return p && typeof p.title === "string" && p.title.trim() !== "" && isFinite(parseFloat(p.price));
+}
+
+const FAVORITES_STORAGE_KEY = "arduino_hub_favorites";
+
+function readFavoriteProducts() {
+    try {
+        const saved = JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY));
+        return Array.isArray(saved) ? saved : [];
+    } catch (e) {
+        return [];
+    }
+}
+
+function isFavoriteProduct(productId) {
+    return readFavoriteProducts().some(p => String(p.id) === String(productId));
+}
+
+function toggleFavoriteProduct(product) {
+    const favorites = readFavoriteProducts();
+    const index = favorites.findIndex(p => String(p.id) === String(product.id));
+    let saved;
+
+    if (index >= 0) {
+        favorites.splice(index, 1);
+        saved = false;
+    } else {
+        favorites.push({
+            id: product.id,
+            title: product.title,
+            image: safeImageSrc(product.image),
+            price: product.price,
+            offerPrice: product.offerPrice,
+            rating: product.rating,
+            category: product.category
+        });
+        saved = true;
+    }
+
+    try {
+        localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
+    } catch (e) {
+        console.warn("Could not save favorites on this device:", e);
+    }
+
+    document.querySelectorAll(".product-favorite").forEach(button => {
+        const active = isFavoriteProduct(button.dataset.favoriteId);
+        button.setAttribute("aria-pressed", String(active));
+        button.setAttribute("aria-label", active ? "Remove from favorites" : "Add to favorites");
+        button.innerHTML = `<i class="fa-${active ? "solid" : "regular"} fa-heart" aria-hidden="true"></i>`;
+    });
+    window.dispatchEvent(new CustomEvent("arduino-hub:favorites-changed"));
+    return saved;
 }
 
 function renderProductsState(grid, icon, message) {
@@ -550,14 +902,17 @@ function createProductCard(p) {
     const price = parseFloat(p.price);
     const offer = parseFloat(p.offerPrice);
     const hasOffer = p.offerPrice !== "" && p.offerPrice != null && isFinite(offer) && offer > 0;
+    const isDiscount = hasOffer && offer < price;
     const finalPrice = hasOffer ? offer : price;
-    const rating = isFinite(parseFloat(p.rating)) ? Math.min(5, Math.max(0, parseFloat(p.rating))) : 5.0;
+    const ratingValue = p.rating !== "" && p.rating != null ? parseFloat(p.rating) : NaN;
+    const hasRating = Number.isFinite(ratingValue) && ratingValue > 0;
+    const rating = hasRating ? Math.min(5, Math.max(0, ratingValue)) : 0;
     const imgSrc = safeImageSrc(p.image);
 
     const card = document.createElement("article");
     card.className = "product-card";
     card.innerHTML = `
-        ${hasOffer ? '<span class="sale-badge">SALE</span>' : ''}
+        ${isDiscount ? '<span class="sale-badge">SALE</span>' : ''}
         <div class="product-img-box${imgSrc ? '' : ' no-img'}">
             ${imgSrc ? `<img src="${escapeHTML(imgSrc)}" alt="${escapeHTML(p.title)}" loading="lazy">` : ''}
         </div>
@@ -565,13 +920,13 @@ function createProductCard(p) {
             <h3 class="product-title" title="${escapeHTML(p.title)}">${escapeHTML(p.title)}</h3>
             <div class="product-rating" title="Click to rate">
                 <span>${getStarsHTML(rating)}</span>
-                <span class="rating-num">(${rating.toFixed(1)})</span>
+                <span class="rating-num">${hasRating ? `(${rating.toFixed(1)})` : "Rate"}</span>
             </div>
         </div>
         <div class="product-price-bar">
             <div class="price-box">
-                <span class="price-old">${hasOffer ? 'EGP ' + price.toFixed(2) : ''}</span>
-                <span class="price-val${hasOffer ? ' is-offer' : ''}">EGP ${finalPrice.toFixed(2)}</span>
+                <span class="price-old">${isDiscount ? 'EGP ' + price.toFixed(2) : ''}</span>
+                <span class="price-val${isDiscount ? ' is-offer' : ''}">EGP ${finalPrice.toFixed(2)}</span>
             </div>
             <button type="button" class="btn-buy-now">Buy Now</button>
         </div>
@@ -579,7 +934,8 @@ function createProductCard(p) {
 
     const img = card.querySelector(".product-img-box img");
     if (img) img.addEventListener("error", () => img.parentElement.classList.add("no-img"));
-    card.querySelector(".product-rating").addEventListener("click", () => openRatingModal(p.id, p.title));
+    const ratingControl = card.querySelector(".product-rating");
+    if (ratingControl) ratingControl.addEventListener("click", () => openRatingModal(p.id, p.title));
     card.querySelector(".btn-buy-now").addEventListener("click", () => buyNowDirect(p.id));
     return card;
 }
@@ -590,6 +946,7 @@ function renderProducts() {
 
     if (productsStatus === "loading") {
         renderProductsState(grid, "fa-spinner fa-spin", "Loading products...");
+        renderNewArrivals();
         return;
     }
 
@@ -612,6 +969,7 @@ function renderProducts() {
     if (filtered.length === 0) {
         const filteredOut = isShop && hadAny;
         renderProductsState(grid, "fa-box-open", filteredOut ? "No products match your search." : "No products available");
+        renderNewArrivals();
         return;
     }
 
@@ -619,6 +977,7 @@ function renderProducts() {
     filtered.forEach(p => frag.appendChild(createProductCard(p)));
     grid.innerHTML = "";
     grid.appendChild(frag);
+    renderNewArrivals();
 }
 
 function buyNowDirect(productId) {
@@ -643,6 +1002,17 @@ function renderCart() {
     if (!container) return;
     
     container.innerHTML = "";
+    if (cart.length === 0) {
+        const emptyState = document.createElement("div");
+        emptyState.className = "cart-empty-state";
+        emptyState.innerHTML = `
+            <span class="cart-empty-state__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2l2.4 11.1a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6L22 7H5"/></svg></span>
+            <h4>Your cart is empty</h4>
+            <p>Explore the shop and add the parts you need for your next project.</p>
+            <a class="cart-empty-state__link" href="shop.html#productsSection">Browse products <span aria-hidden="true">→</span></a>
+        `;
+        container.appendChild(emptyState);
+    }
     let total = 0, count = 0;
     cart.forEach(item => {
         total += item.price * item.qty;
@@ -672,6 +1042,9 @@ function renderCart() {
 
     if (badge) badge.innerText = count;
     if (totalEl) totalEl.innerText = "EGP " + total.toFixed(2);
+    const mobileCount = document.getElementById("mobileCartCount");
+    if (mobileCount) mobileCount.innerText = String(count);
+    window.dispatchEvent(new CustomEvent("arduino-hub:cart-changed", { detail: { count } }));
 }
 
 function removeFromCart(id) {

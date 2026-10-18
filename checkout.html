@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -160,12 +160,18 @@
         @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
     </style>
     <link rel="stylesheet" href="theme-light.css">
+    <link rel="stylesheet" href="checkout-premium.css">
+    <link rel="stylesheet" href="storefront-redesign.css">
+    <link rel="stylesheet" href="site-navigation.css?v=5">
+    <link rel="stylesheet" href="arduino-hub-ui.css?v=3">
+    <link rel="stylesheet" href="site-design-system.css?v=4">
 </head>
-<body>
+<body class="checkout-page">
 
     <div class="left-col">
         <div class="left-content">
-            <a href="index.html" class="brand"><i class="fa-solid fa-microchip"></i> Arduino Hub</a>
+            <button class="site-menu-trigger" type="button" data-site-menu-open aria-label="Open menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+            <a href="index.html" class="brand"><img class="brand-logo__image" src="assets/arduino-hub-logo.png" alt="Arduino Hub"></a>
             
             <div class="breadcrumbs">
                 <a href="shop.html" style="color:#38bdf8; text-decoration:none;">Cart</a> <span>&gt;</span>
@@ -267,6 +273,8 @@
             </div>
         </div>
     </div>
+
+
 
     <script>
 
@@ -615,6 +623,8 @@
             });
         }
     </script>
+    <script src="ai-chatbot.js?v=23"></script>
+    <script src="site-navigation.js?v=4"></script>
 </body>
 </html>
 

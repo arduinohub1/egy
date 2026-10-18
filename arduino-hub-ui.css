@@ -1,0 +1,644 @@
+/* Shared visual polish for the existing Arduino Hub frontend.
+   This file intentionally contains presentation only; application behavior stays in its original files. */
+:root {
+  --ui-blue: #176fe8;
+  --ui-blue-strong: #115bc2;
+  --ui-cyan: #13a9c6;
+  --ui-ink: #102044;
+  --ui-text: #334560;
+  --ui-muted: #697b95;
+  --ui-line: #e3ebf5;
+  --ui-wash: #f4f8fd;
+  --ui-surface: #fff;
+  --ui-radius-sm: 10px;
+  --ui-radius-md: 15px;
+  --ui-radius-lg: 21px;
+  --ui-shadow-soft: 0 7px 22px rgba(24, 56, 104, .065);
+  --ui-shadow-raised: 0 13px 30px rgba(24, 56, 104, .11);
+  --ui-focus: #145ebd;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) {
+  color: var(--ui-ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) :is(a, button, input, select, textarea, summary) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) :is(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--ui-focus);
+  outline-offset: 3px;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) :is(button, input, select, textarea) {
+  font-family: inherit;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) :is(button, a, input, select, textarea) {
+  transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) :is(button, [role="button"]) :disabled,
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) button:disabled {
+  cursor: not-allowed;
+}
+
+/* Shared storefront surfaces and controls */
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) :is(
+  .product-card, .category-card, .featured-promo, .service-benefits__inner,
+  .account-profile-card, .account-shortcuts > a, .favorite-card,
+  .maker-panel, .maker-ai-project, .maker-result-card, .glass-card,
+  .auth-container, .payment-box, .cart-drawer, .cart-modal
+) {
+  border-color: var(--ui-line);
+}
+
+body:is(.premium-home, .premium-shop) :is(.category-card, .product-card, .featured-promo) {
+  box-shadow: 0 5px 16px rgba(29, 59, 100, .055);
+}
+
+body:is(.premium-home, .premium-shop) :is(.category-card, .product-card, .featured-promo):hover {
+  box-shadow: var(--ui-shadow-raised);
+}
+
+body:is(.premium-home, .premium-shop) .category-card:hover {
+  border-color: #a9cdf6;
+}
+
+/* High-contrast home hero: text remains the focus without relying on a banner image. */
+body.premium-home .hero {
+  border-color: rgba(73, 178, 236, .42);
+  background:
+    radial-gradient(ellipse at 88% 14%, rgba(87, 223, 239, .3), transparent 34%),
+    radial-gradient(ellipse at 7% 100%, rgba(49, 137, 245, .32), transparent 42%),
+    linear-gradient(132deg, #0c2850 0%, #124f9f 56%, #087e9a 135%);
+  box-shadow: 0 19px 42px rgba(19, 73, 141, .2), inset 0 1px 0 rgba(255, 255, 255, .16);
+}
+
+body.premium-home .hero::before {
+  inset: 9px;
+  border: 1px solid rgba(220, 245, 255, .2);
+  border-radius: 21px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .045), transparent 60%);
+}
+
+body.premium-home .hero::after {
+  top: -145px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  border-color: rgba(183, 245, 255, .18);
+  box-shadow: 0 0 0 22px rgba(183, 245, 255, .045), 0 0 0 46px rgba(183, 245, 255, .03);
+}
+
+body.premium-home .hero-text { position: relative; z-index: 2; }
+
+body.premium-home .hero-tag {
+  border-color: rgba(219, 244, 255, .36);
+  color: #bdefff !important;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .16);
+}
+
+body.premium-home .hero-text h1,
+body.premium-home .hero-text h1 em {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+body.premium-home .hero-text h1 em {
+  color: #8ff0f5 !important;
+  -webkit-text-fill-color: #8ff0f5 !important;
+}
+
+body.premium-home .hero-text p { color: #e1efff !important; }
+
+body.premium-home .hero-cta .btn-primary {
+  color: #103d78 !important;
+  background: linear-gradient(135deg, #fff, #dff8ff) !important;
+  box-shadow: 0 9px 22px rgba(2, 22, 53, .24);
+}
+
+body.premium-home .hero-cta .btn-primary:hover {
+  color: #0b2e5c !important;
+  background: #fff !important;
+  box-shadow: 0 12px 25px rgba(2, 22, 53, .3);
+}
+
+body.premium-home .hero-cta .btn-secondary {
+  border-color: rgba(224, 245, 255, .55) !important;
+  color: #f5fbff !important;
+  background: rgba(255, 255, 255, .1) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12);
+}
+
+body.premium-home .hero-cta .btn-secondary:hover {
+  background: rgba(255, 255, 255, .18) !important;
+}
+
+body.premium-home .service-benefits__inner {
+  border-color: #dce8f7;
+  background: #fff;
+}
+
+body.premium-home .service-benefit > i {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px;
+  color: #126fe5;
+  background: #eaf3ff;
+}
+
+body.premium-home .shipping-offer {
+  border-color: #d4e7f7;
+  background: linear-gradient(110deg, #fff 0%, #f3fbff 100%);
+  box-shadow: 0 5px 16px rgba(29, 86, 143, .055);
+}
+
+body.premium-home .shipping-offer > i {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 13px;
+  color: #0d7bc1;
+  background: #e1f6fb;
+  font-size: 1.35rem;
+}
+
+body.premium-home .category-card:not(:has(.category-product-image)) > i {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 8px !important;
+  border: 1px solid #deebfb;
+  border-radius: 13px;
+  color: #176fe8 !important;
+  background: linear-gradient(145deg, #f5faff, #eaf3ff);
+  font-size: 1.25rem !important;
+}
+
+body:is(.premium-home, .premium-shop) .product-card .btn-buy-now,
+body.maker-page .maker-submit,
+body.account-page .account-primary-action,
+body.favorites-page .favorite-card__actions a,
+body.checkout-page #placeOrderBtn,
+body.checkout-page .btn-primary {
+  min-height: 44px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+body:is(.premium-home, .premium-shop) :is(.section-header, .section-action) {
+  scroll-margin-top: 96px;
+}
+
+body:is(.premium-home, .premium-shop) .section-action {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 2px;
+}
+
+body:is(.premium-home, .premium-shop) .mobile-bottom-nav {
+  border-color: rgba(220, 231, 245, .9);
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 -8px 26px rgba(25, 68, 130, .09);
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav a {
+  min-height: 48px;
+}
+
+body.premium-home .mobile-bottom-nav {
+  border-color: rgba(195, 217, 241, .96);
+  box-shadow: 0 -10px 30px rgba(21, 64, 123, .17), inset 0 1px 0 #fff;
+}
+
+/* Keep the existing menu and centered brand mark crisp across pages. */
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu {
+  border-color: #dfe8f4;
+  box-shadow: 0 22px 64px rgba(15, 35, 72, .2);
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__links > a,
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-group > summary {
+  min-height: 48px;
+}
+
+/* Account, saved items, and kit workspace share the same calm surface language. */
+body.account-page .account-profile-card,
+body.favorites-page .favorite-card,
+body.maker-page .maker-panel,
+body.maker-page .maker-result-card {
+  box-shadow: var(--ui-shadow-soft);
+}
+
+body.account-page .account-shortcuts > a:hover,
+body.favorites-page .favorite-card:hover {
+  border-color: #c3d9f5;
+  box-shadow: var(--ui-shadow-raised);
+}
+
+body.maker-page :is(.maker-mode, .maker-price-panel, .maker-ai-section) {
+  border-color: var(--ui-line);
+}
+
+body.maker-page .maker-project-input,
+body.aiagent-page :is(textarea, input, select),
+body.login-page .input-wrapper input,
+body.checkout-page .form-control {
+  border-radius: 12px;
+}
+
+body.maker-page .maker-project-input:focus,
+body.aiagent-page :is(textarea, input, select):focus,
+body.login-page .input-wrapper input:focus,
+body.checkout-page .form-control:focus {
+  border-color: #79aef0;
+  box-shadow: 0 0 0 4px rgba(23, 111, 232, .12);
+}
+
+body.checkout-page :is(.payment-option, .payment-box, .cart-item) {
+  border-color: var(--ui-line);
+}
+
+/* The admin area keeps its dark-workspace character, with the storefront accent and clearer spacing. */
+body.admin-page {
+  min-width: 320px;
+  color: #e8f0fb;
+  background: #0b1220;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.admin-page :is(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid #7dd3fc;
+  outline-offset: 3px;
+}
+
+body.admin-page > header {
+  min-height: 68px;
+  padding: 12px clamp(16px, 4vw, 56px);
+  border-bottom-color: rgba(148, 176, 213, .16);
+  background: rgba(12, 22, 39, .94);
+  box-shadow: 0 5px 22px rgba(0, 0, 0, .13);
+}
+
+body.admin-page .admin-container {
+  width: min(100%, 1440px);
+  padding: clamp(18px, 3.5vw, 42px) clamp(14px, 4vw, 56px);
+}
+
+body.admin-page .admin-tabs {
+  gap: 8px;
+  border-bottom-color: rgba(148, 176, 213, .17);
+  scrollbar-width: thin;
+}
+
+body.admin-page .admin-tab {
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-size: .92rem;
+}
+
+body.admin-page .admin-tab.active {
+  border-color: rgba(56, 189, 248, .24);
+  background: rgba(56, 189, 248, .12);
+}
+
+body.admin-page .table-responsive {
+  border: 1px solid rgba(148, 176, 213, .15);
+  background: #0f172a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
+}
+
+body.admin-page table {
+  min-width: 720px;
+  margin-top: 0;
+}
+
+body.admin-page :is(th, td) {
+  padding: 14px 16px;
+}
+
+body.admin-page th {
+  position: sticky;
+  top: 0;
+  background: #18243a;
+}
+
+body.admin-page .action-btn,
+body.admin-page .admin-tab {
+  transition: color .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+body.admin-page .action-btn:focus-visible,
+body.admin-page .admin-tab:focus-visible {
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, .2);
+}
+
+body.admin-page .modal-content,
+body.admin-page .promo-editor-card {
+  border-color: rgba(148, 176, 213, .18);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, .34);
+}
+
+@media (max-width: 700px) {
+  body.admin-page > header {
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  body.admin-page > header h2 {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  body.admin-page > header > div {
+    gap: 8px !important;
+  }
+
+  body.admin-page .admin-tabs {
+    margin-right: -14px;
+    padding: 0 14px 12px 0;
+  }
+
+  body.admin-page .admin-tab {
+    flex: 0 0 auto;
+    font-size: .82rem;
+  }
+
+  body.admin-page table {
+    min-width: 680px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page, .admin-page) *,
+  body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page, .admin-page) *::before,
+  body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page, .admin-page) *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Simplified primary navigation: category/account live in the drawer; the dock keeps four core destinations. */
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-icon {
+  width: 21px;
+  height: 21px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu {
+  width: min(390px, calc(100vw - 22px));
+  padding: 14px 20px 22px;
+  border-color: #dce7f4;
+  border-radius: 24px;
+  background: rgba(255,255,255,.98);
+  box-shadow: 0 24px 70px rgba(13,38,78,.24), inset 0 1px 0 #fff;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__header {
+  min-height: 84px;
+  border-bottom-color: #e8eff8;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__brand {
+  width: 96px;
+  height: 82px;
+  border-radius: 14px;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__close {
+  width: 38px;
+  height: 38px;
+  border: 0 !important;
+  color: #344c6d;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__account {
+  min-height: 80px;
+  margin: 12px 0 6px;
+  padding: 12px;
+  border: 1px solid #e3edf8;
+  border-radius: 17px;
+  background: linear-gradient(120deg,#f5f9ff,#edf8ff);
+  transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__account:hover {
+  transform: translateY(-1px);
+  border-color: #b8d5f7;
+  box-shadow: 0 7px 18px rgba(23,111,232,.09);
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__avatar {
+  width: 46px;
+  height: 46px;
+  color: #176fe8;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #d9e8fa;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__avatar .site-icon {
+  width: 22px;
+  height: 22px;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__account-copy > span {
+  color: #5d7593;
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__links {
+  gap: 3px;
+  padding: 8px 0 10px;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__links > a,
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-group > summary {
+  min-height: 48px;
+  grid-template-columns: 26px minmax(0,1fr) auto;
+  gap: 12px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 13px;
+  color: #243a58;
+  font-size: .91rem;
+  font-weight: 700;
+  transition: color .16s ease, background-color .16s ease, transform .16s ease;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__links > a > .site-icon,
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-group > summary > .site-icon:first-child {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: #176fe8;
+  background: transparent;
+  stroke-width: 1.9;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__links > a:hover,
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-group > summary:hover {
+  transform: translateX(2px);
+  border-color: #d8e9fb;
+  color: #125fc8;
+  background: #f4f9ff;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__tag,
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__cart-count {
+  justify-self: end;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #176fe8;
+  background: #e8f2ff;
+  font-size: .67rem;
+  font-weight: 850;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-group[open] > summary {
+  border-color: #d8e9fb;
+  color: #125fc8;
+  background: #f4f9ff;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-group > summary > .site-icon:last-child {
+  width: 17px;
+  height: 17px;
+  color: #647b99;
+  transition: transform .2s ease;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-group[open] > summary > .site-icon:last-child {
+  transform: rotate(180deg);
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-links {
+  gap: 4px;
+  padding: 5px 0 8px 43px;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-links a {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  color: #596f8a;
+  font-size: .82rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__category-links a .site-icon {
+  width: 17px;
+  height: 17px;
+  color: #4382cf;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__secondary {
+  gap: 2px;
+  padding: 8px 0 13px 43px;
+  border-top: 1px solid #e8eff8;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .site-menu__secondary a {
+  min-height: 32px;
+  color: #71819a;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav a .mobile-nav-icon {
+  position: relative;
+  width: 40px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: currentColor;
+  background: #f1f5fa;
+  transition: color .18s ease, background-color .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav a .mobile-nav-icon > .site-icon {
+  width: 21px;
+  height: 21px;
+  stroke-width: 1.9;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav a.active .mobile-nav-icon,
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav a[aria-current="page"] .mobile-nav-icon {
+  transform: translateY(-1px);
+  border-color: #c6ddfb;
+  color: #fff;
+  background: linear-gradient(145deg,#2786f5,#1760d8);
+  box-shadow: 0 5px 13px rgba(23,111,232,.22);
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav a[data-cart-nav] .mobile-cart-count {
+  top: -4px;
+  right: -5px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border: 2px solid #fff;
+  font-size: .57rem;
+}
+
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) #aicb-fab { z-index: 4800; }
+body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page).site-menu-open #aicb-fab { visibility: hidden; }
+
+@media (max-width: 700px) {
+  body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav {
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    align-items: center;
+    height: 72px;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+    border-radius: 23px;
+  }
+
+  body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav a {
+    min-height: 56px;
+    gap: 3px;
+    border-radius: 14px;
+    font-size: .63rem;
+  }
+
+  body:is(.premium-home, .premium-shop, .account-page, .favorites-page, .maker-page, .aiagent-page, .login-page, .checkout-page) .mobile-bottom-nav a .mobile-nav-icon {
+    width: 38px;
+    height: 32px;
+  }
+}
+
+/* Bottom navigation removed */
+

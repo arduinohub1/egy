@@ -1,0 +1,104 @@
+/* Visual-only checkout skin aligned with the Arduino Hub light storefront. */
+body.checkout-page {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    color: #1e293b;
+    background: #f5f8fe;
+    background-image: none;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+body.checkout-page .left-col {
+    flex: 1.1;
+    justify-content: flex-end;
+    padding: 42px 5% 54px 8%;
+    background: #f5f8fe;
+}
+body.checkout-page .left-content { max-width: 620px; }
+body.checkout-page .brand {
+    margin-bottom: 22px;
+    color: #102044;
+    font-size: 1.45rem;
+    text-decoration: none;
+}
+body.checkout-page .brand i { color: #1673f9; filter: none; }
+body.checkout-page .breadcrumbs { color: #64748b; }
+body.checkout-page .breadcrumbs a { color: #1673f9 !important; text-decoration: none; }
+body.checkout-page .breadcrumbs .active { color: #102044; }
+body.checkout-page h2 { margin-top: 27px; color: #102044; font-size: 1.05rem; }
+body.checkout-page h2::after { background: linear-gradient(90deg,#dbe4f1,transparent); }
+body.checkout-page .input-group { margin-bottom: 12px; }
+body.checkout-page .form-control {
+    min-height: 48px;
+    border: 1px solid #dbe4f1 !important;
+    border-radius: 12px;
+    color: #1e293b !important;
+    background: #fff !important;
+    box-shadow: 0 1px 2px rgba(16,32,68,.03);
+}
+body.checkout-page .form-control:focus {
+    border-color: #1673f9 !important;
+    box-shadow: 0 0 0 3px rgba(22,115,249,.1) !important;
+}
+body.checkout-page .form-control::placeholder { color: #94a3b8 !important; }
+body.checkout-page select.form-control option { color: #1e293b; background: #fff; }
+body.checkout-page .payment-option {
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 13px !important;
+    color: #1e293b !important;
+    background: #fff !important;
+    box-shadow: 0 2px 8px rgba(16,32,68,.03);
+}
+body.checkout-page .payment-option strong { color: #1e293b; }
+body.checkout-page .payment-option input { accent-color: #1673f9; }
+body.checkout-page .payment-option:hover,
+body.checkout-page .payment-option:has(input:checked) { border-color: #8bbcff !important; background: #f8fbff !important; }
+body.checkout-page #onlinePaymentDetails { color: #64748b !important; }
+body.checkout-page #onlinePaymentDetails strong { color: #1673f9 !important; }
+body.checkout-page #paymentScreenshot { color: #334155 !important; background: #f8fafc !important; }
+body.checkout-page .footer-actions { margin-top: 24px; }
+body.checkout-page .return-link { color: #1673f9; }
+body.checkout-page .btn-primary,
+body.checkout-page #placeOrderBtn { min-height: 48px; border: 0; border-radius: 12px; color: #fff !important; background: #1673f9 !important; box-shadow: 0 6px 16px rgba(22,115,249,.2); }
+body.checkout-page .btn-primary:hover:not(:disabled) { background: #0d5fe0 !important; }
+body.checkout-page .page-footer { color: #94a3b8; border-top-color: #e2e8f0; }
+
+body.checkout-page .right-col {
+    flex: .9;
+    padding: 42px 8% 54px 4%;
+    border-left: 1px solid #e2eaf7;
+    background: #fff;
+    box-shadow: -8px 0 30px rgba(35,80,153,.035);
+}
+body.checkout-page .right-content { max-width: 470px; }
+body.checkout-page .cart-item { border-bottom: 1px solid #edf1f8; }
+body.checkout-page .cart-item:hover { background: #f8fbff; border-color: #edf1f8; }
+body.checkout-page .item-img-wrapper { border-color: #e2e8f0; box-shadow: 0 3px 10px rgba(16,32,68,.08); }
+body.checkout-page .item-qty { color: #fff; background: #1673f9; box-shadow: none; }
+body.checkout-page .item-info { color: #1e293b; }
+body.checkout-page .item-price { color: #1673f9; }
+body.checkout-page .right-content > div[style*="border-top"] { border-top-color: #e2e8f0 !important; }
+body.checkout-page .summary-line { color: #64748b; }
+body.checkout-page .summary-line > span:last-child { color: #334155 !important; }
+body.checkout-page .summary-total { color: #102044; border-top-color: #e2e8f0; }
+body.checkout-page .summary-total span:first-child { color: #102044; }
+body.checkout-page .summary-total .currency { color: #64748b; }
+body.checkout-page .payment-box { color: #64748b; border-color: #e2e8f0; background: #f8fbff; box-shadow: none; }
+body.checkout-page .payment-box strong { color: #102044; }
+
+@media (max-width: 999px) {
+    body.checkout-page { flex-direction: column-reverse; }
+    body.checkout-page .left-col,
+    body.checkout-page .right-col { width: 100%; padding: 26px 5%; }
+    body.checkout-page .left-col { justify-content: center; }
+    body.checkout-page .right-col { border: 0; border-bottom: 1px solid #e2eaf7; box-shadow: none; }
+    body.checkout-page .left-content,
+    body.checkout-page .right-content { max-width: 680px; margin: 0 auto; position: static; }
+}
+@media (max-width: 520px) {
+    body.checkout-page .left-col,
+    body.checkout-page .right-col { padding: 22px 4%; }
+    body.checkout-page .brand { font-size: 1.25rem; }
+    body.checkout-page h2 { margin-top: 22px; }
+    body.checkout-page .payment-option { padding: 13px !important; }
+}
