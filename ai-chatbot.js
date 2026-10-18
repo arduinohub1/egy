@@ -7,6 +7,11 @@
 (function () {
     "use strict";
 
+    // Disable AI Assistant on checkout page
+    if (typeof location !== "undefined" && location.pathname && location.pathname.toLowerCase().includes("checkout.html")) {
+        return;
+    }
+
     /* ---------- AI config ---------- */
     // No API key lives in the browser. Requests go to our own backend proxy,
     // which holds the Grok (xAI) key in its .env file.
@@ -611,18 +616,46 @@
 
 @media(max-width:480px){
   #aicb-panel{width:calc(100vw - 16px);height:calc(100vh - 80px);bottom:8px;right:8px;border-radius:20px}
-  #aicb-fab{top:175px;right:16px;bottom:auto;width:58px;height:58px;font-size:1.6rem}
+  #aicb-fab{top:165px;right:16px;bottom:auto;width:52px;height:52px;}
 }
 
 /* Arduino Hub assistant refresh: compact, high-contrast, and clear of the mobile dock. */
-#aicb-fab{display:flex!important;align-items:center;justify-content:center;top:165px;right:24px;bottom:auto;width:64px;height:64px;padding:0;overflow:visible;border:2px solid rgba(103,232,249,.45);border-radius:50%;color:#fff;background:linear-gradient(145deg,#1d4ed8 0%,#0284c7 52%,#06b6d4 100%);box-shadow:0 10px 30px rgba(2,132,199,.45),0 0 0 4px rgba(56,189,248,.18),inset 0 2px 4px rgba(255,255,255,.35);touch-action:none;user-select:none;-webkit-user-select:none;animation:aicb-glow 3s ease-in-out infinite;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s ease}
-#aicb-fab .aicb-fab-svg{width:36px;height:36px;pointer-events:none;filter:drop-shadow(0 2px 6px rgba(10,22,40,.35))}
-#aicb-fab .aicb-fab-badge{position:absolute;top:-5px;right:-5px;padding:2px 6px;border-radius:99px;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;font-size:.64rem;font-weight:900;letter-spacing:.04em;line-height:1.1;border:2px solid #fff;box-shadow:0 3px 8px rgba(239,68,68,.4);pointer-events:none}
-#aicb-fab .aicb-fab-svg .aicb-spark{fill:#fef08a;animation:aicb-blink 2s ease-in-out infinite}
-#aicb-fab .aicb-fab-svg .aicb-eye{fill:#67e8f9;filter:drop-shadow(0 0 4px rgba(103,232,249,.9))}
-#aicb-fab:hover{transform:translateY(-4px) scale(1.08);box-shadow:0 16px 40px rgba(2,132,199,.55),0 0 0 6px rgba(56,189,248,.28),0 0 24px rgba(56,189,248,.3)}
-#aicb-fab:hover .aicb-fab-svg{filter:drop-shadow(0 3px 10px rgba(10,22,40,.45))}
-#aicb-fab:focus-visible{outline:3px solid #0e7490;outline-offset:4px}
+/* Hide AI assistant when cart is open */
+body.cart-open #aicb-fab, .cart-open #aicb-fab, #cartDrawer.open ~ #aicb-fab, #cartOverlay.open ~ #aicb-fab { display: none !important; }
+
+/* Modern, sleek AI Floating Action Button */
+#aicb-fab {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  top: 165px;
+  right: 24px;
+  bottom: auto;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  overflow: visible;
+  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(145deg, #091326 0%, #0f1e38 52%, #0284c7 100%);
+  box-shadow: 0 8px 26px rgba(2, 132, 199, 0.45), 0 0 0 3px rgba(56, 189, 248, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.35);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  animation: aicb-glow 3.5s ease-in-out infinite;
+  transition: transform .25s cubic-bezier(.34, 1.56, .64, 1), box-shadow .25s ease;
+  cursor: pointer;
+}
+#aicb-fab:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 14px 34px rgba(2, 132, 199, 0.6), 0 0 0 5px rgba(56, 189, 248, 0.25), 0 0 20px rgba(56, 189, 248, 0.35);
+}
+#aicb-fab:focus-visible { outline: 3px solid #0e7490; outline-offset: 4px; }
+.aicb-fab-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; pointer-events: none; }
+.aicb-spark-svg { width: 22px; height: 22px; filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.65)); animation: aicb-spark-pulse 2.8s ease-in-out infinite; }
+.aicb-wordmark { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.08em; color: #ffffff; line-height: 1; text-transform: uppercase; text-shadow: 0 0 8px rgba(56, 189, 248, 0.7); }
+@keyframes aicb-spark-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.12); opacity: 0.85; } }
 @keyframes aicb-glow{0%,100%{box-shadow:0 10px 30px rgba(2,132,199,.45),0 0 0 4px rgba(56,189,248,.18),inset 0 2px 4px rgba(255,255,255,.35)}50%{box-shadow:0 12px 34px rgba(2,132,199,.6),0 0 0 7px rgba(56,189,248,.1),0 0 22px rgba(56,189,248,.25),inset 0 2px 4px rgba(255,255,255,.35)}}
 @keyframes aicb-spin{from{transform-origin:center;transform:rotate(0deg)}to{transform-origin:center;transform:rotate(360deg)}}
 @keyframes aicb-blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.82)}}
@@ -698,7 +731,7 @@
 .aicb-toast{color:#183251;background:#fff;border-color:#7bb9fa;box-shadow:0 10px 30px rgba(24,60,108,.2)}
 .aicb-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 @media(max-width:700px){
-  #aicb-fab{top:175px;right:16px;bottom:auto;width:58px;height:58px}
+  #aicb-fab{top:165px;right:16px;bottom:auto;width:52px;height:52px;}
   #aicb-panel{right:10px;bottom:calc(10px + env(safe-area-inset-bottom));width:calc(100vw - 20px);height:min(680px,calc(100dvh - 24px - env(safe-area-inset-bottom)));max-height:calc(100dvh - 24px - env(safe-area-inset-bottom));border-radius:22px}
 }
 @media(max-height:560px) and (max-width:700px){
@@ -723,7 +756,15 @@
         fab.setAttribute("aria-controls", "aicb-panel");
         fab.setAttribute("aria-describedby", "aicb-drag-help");
         fab.setAttribute("aria-keyshortcuts", "ArrowUp ArrowDown ArrowLeft ArrowRight Home Enter Space");
-        fab.innerHTML = '<svg class="aicb-fab-svg" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4.5v4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="3.8" r="2" fill="#67e8f9"/><rect x="6" y="8.5" width="20" height="16.5" rx="6" fill="rgba(255,255,255,0.16)" stroke="#fff" stroke-width="2"/><rect x="3" y="13.5" width="2.8" height="6.5" rx="1.4" fill="#67e8f9"/><rect x="26.2" y="13.5" width="2.8" height="6.5" rx="1.4" fill="#67e8f9"/><rect x="9" y="11.5" width="14" height="7.5" rx="3.2" fill="#0a192f" stroke="rgba(103,232,249,0.55)" stroke-width="1"/><circle class="aicb-eye" cx="12.8" cy="15.2" r="1.9"/><circle class="aicb-eye" cx="19.2" cy="15.2" r="1.9"/><path d="M12.5 21.5c1 1 2.2 1.4 3.5 1.4s2.5-.4 3.5-1.4" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><path class="aicb-spark" d="M26.5 2.5l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8z"/><path class="aicb-spark" d="M5.2 3.5l.55 1.45 1.45.55-1.45.55-.55 1.45-.55-1.45-1.45-.55 1.45-.55z"/></svg><span class="aicb-fab-badge" aria-hidden="true">AI</span><span id="aicb-drag-help" class="aicb-visually-hidden">Drag to move. You can also use the arrow keys to move it, or Home to reset its position.</span>';
+        fab.innerHTML = '<div class="aicb-fab-inner" aria-hidden="true">' +
+            '<svg class="aicb-spark-svg" viewBox="0 0 24 24" fill="none">' +
+            '<path d="M12 2C12 7.2 7.2 12 2 12C7.2 12 12 16.8 12 22C12 16.8 16.8 12 22 12C16.8 12 12 7.2 12 2Z" fill="url(#aicb-spark-grad)"/>' +
+            '<path d="M19.5 2.5C19.5 4.2 18.2 5.5 16.5 5.5C18.2 5.5 19.5 6.8 19.5 8.5C19.5 6.8 20.8 5.5 22.5 5.5C20.8 5.5 19.5 4.2 19.5 2.5Z" fill="#38bdf8"/>' +
+            '<defs><linearGradient id="aicb-spark-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="0.5" stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/></linearGradient></defs>' +
+            '</svg>' +
+            '<span class="aicb-wordmark">AI</span>' +
+            '</div>' +
+            '<span id="aicb-drag-help" class="aicb-visually-hidden">Drag to move. You can also use the arrow keys to move it, or Home to reset its position.</span>';
 
         var dragState = null;
         var suppressPointerClick = false;
@@ -828,7 +869,7 @@
         panel.inert = true;
         panel.innerHTML = `
 <div class="aicb-header">
-    <div class="aicb-header-icon"><svg class="aicb-header-svg" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4.5v4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="3.8" r="2" fill="#67e8f9"/><rect x="6" y="8.5" width="20" height="16.5" rx="6" fill="rgba(255,255,255,0.16)" stroke="#fff" stroke-width="2"/><rect x="3" y="13.5" width="2.8" height="6.5" rx="1.4" fill="#67e8f9"/><rect x="26.2" y="13.5" width="2.8" height="6.5" rx="1.4" fill="#67e8f9"/><rect x="9" y="11.5" width="14" height="7.5" rx="3.2" fill="#0a192f" stroke="rgba(103,232,249,0.55)" stroke-width="1"/><circle cx="12.8" cy="15.2" r="1.9" fill="#67e8f9"/><circle cx="19.2" cy="15.2" r="1.9" fill="#67e8f9"/><path d="M12.5 21.5c1 1 2.2 1.4 3.5 1.4s2.5-.4 3.5-1.4" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><path d="M26.5 2.5l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8z" fill="#fef08a"/></svg></div>
+    <div class="aicb-header-icon"><svg viewBox="0 0 24 24" fill="none" class="aicb-header-svg" style="width:24px;height:24px;"><path d="M12 2C12 7.2 7.2 12 2 12C7.2 12 12 16.8 12 22C12 16.8 16.8 12 22 12C16.8 12 12 7.2 12 2Z" fill="url(#aicb-h-grad)"/><path d="M19.5 2.5C19.5 4.2 18.2 5.5 16.5 5.5C18.2 5.5 19.5 6.8 19.5 8.5C19.5 6.8 20.8 5.5 22.5 5.5C20.8 5.5 19.5 4.2 19.5 2.5Z" fill="#38bdf8"/><defs><linearGradient id="aicb-h-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#38bdf8"/><stop offset="0.5" stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/></linearGradient></defs></svg></div>
     <div class="aicb-header-text">
         <h4 id="aicb-title">AI Project Assistant</h4>
         <span>Smart Hardware &amp; Wiring Engineer</span>
@@ -841,6 +882,25 @@
     <button class="aicb-send" id="aicb-sendBtn" type="button" aria-label="Send message" onclick="window._aicbSend()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
 </div>`;
         document.body.appendChild(panel);
+        function updateCartVisibility() {
+            var cartDrawer = document.getElementById("cartDrawer");
+            var cartOverlay = document.getElementById("cartOverlay");
+            var isCartOpen = document.body.classList.contains("cart-open") ||
+                (cartDrawer && cartDrawer.classList.contains("open")) ||
+                (cartOverlay && cartOverlay.classList.contains("open"));
+            if (fab) {
+                if (isCartOpen) {
+                    fab.style.setProperty("display", "none", "important");
+                    var panel = document.getElementById("aicb-panel");
+                    if (panel) panel.classList.remove("open");
+                } else {
+                    fab.style.removeProperty("display");
+                }
+            }
+        }
+        setInterval(updateCartVisibility, 200);
+        document.addEventListener("click", function () { setTimeout(updateCartVisibility, 40); });
+
 
         // Toast
         var toast = document.createElement("div");

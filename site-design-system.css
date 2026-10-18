@@ -617,15 +617,15 @@ body.premium-home .hero-cta .hero-ai-btn:hover {
 
 .ai-assistant-promo__badge {
   margin-top: -9px;
-  padding: 2px 9px;
+  padding: 3px 12px;
   border-radius: 99px;
-  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  background: linear-gradient(135deg, #0284c7, #2563eb);
   color: #ffffff;
-  font-size: 0.62rem;
-  font-weight: 900;
+  font-size: 0.72rem;
+  font-weight: 850;
   letter-spacing: 0.08em;
-  border: 2px solid #0d2240;
-  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
 }
 
 .ai-assistant-promo__eyebrow {
@@ -1305,4 +1305,12 @@ body.account-page {
   .maker-chat-banner button {
     width: 100%;
   }
+}
+
+/* Hide floating AI assistant when cart is open */
+body.cart-open #aicb-fab,
+.cart-open #aicb-fab,
+#cartDrawer.open ~ #aicb-fab,
+#cartOverlay.open ~ #aicb-fab {
+  display: none !important;
 }

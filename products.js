@@ -1058,6 +1058,14 @@ function toggleCart(open) {
     const drawer = document.getElementById("cartDrawer");
     if (overlay) overlay.classList.toggle("open", open);
     if (drawer) drawer.classList.toggle("open", open);
+    document.body.classList.toggle("cart-open", Boolean(open));
+    const fab = document.getElementById("aicb-fab");
+    if (fab) {
+        if (open) fab.style.setProperty("display", "none", "important");
+        else fab.style.removeProperty("display");
+    }
+    const panel = document.getElementById("aicb-panel");
+    if (panel && open) panel.classList.remove("open");
 }
 
 function handleCheckout() {
